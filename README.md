@@ -25,5 +25,5 @@ If your linter plugin checks your code as you type (before you save) it can be h
 ## Versioning
 
  - Patch releases are for improved documentation, fixing a rule to stop reporting false positives and internal code changes.
- - Minor releases are for changes to rules that can be automatically be fixed.
+ - Minor releases are for changes to rules that can automatically be fixed.
  - Major releases happen when rules are changed that can't be fixed automatically.

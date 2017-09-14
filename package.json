@@ -1,0 +1,35 @@
+{
+  "name": "eslint-config-molindo",
+  "version": "0.0.1",
+  "description": "Molindo ESLint config that implements our styleguide and helps to catch errors.",
+  "main": "index.js",
+  "repository": "https://github.com/molindo/eslint-config-molindo",
+  "author": "Jan Amann <jam@molindo.at>",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest",
+    "prepublish": "npm run lint && npm run test"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.6.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-prettier": "^2.2.0",
+    "jest": "^21.0.2",
+    "prettier": "^1.6.1"
+  },
+  "peerDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.6.1",
+    "eslint-plugin-css-modules": "^2.7.5",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-react": "^7.3.0"
+  }
+}

@@ -23,7 +23,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       ERROR,
       {
-        devDependencies: ['**/__testUtils__/*.js', '**/__tests__/*-test.js']
+        devDependencies: ['**/__testUtils__/**/*.js', '**/__tests__/*-test.js']
       }
     ],
     'import/order': [

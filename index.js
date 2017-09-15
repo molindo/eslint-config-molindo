@@ -4,7 +4,7 @@ const OFF = 'off';
 module.exports = {
   parser: 'babel-eslint',
 
-  plugins: ['import', 'prettier'],
+  plugins: ['import', 'import-order-autofix', 'prettier'],
 
   settings: {
     'import/resolver': 'node'
@@ -18,6 +18,7 @@ module.exports = {
 
   rules: {
     'arrow-body-style': [ERROR, 'as-needed'],
+    curly: [ERROR, 'multi-line'],
     'import/no-unresolved': [ERROR, {commonjs: true}],
     'import/no-named-as-default': OFF,
     'import/no-extraneous-dependencies': [
@@ -26,7 +27,8 @@ module.exports = {
         devDependencies: ['**/__testUtils__/**/*.js', '**/__tests__/*-test.js']
       }
     ],
-    'import/order': [
+    'import/order': OFF,
+    'import-order-autofix/order': [
       ERROR,
       {
         groups: [
@@ -36,7 +38,8 @@ module.exports = {
           'parent',
           'sibling',
           'index'
-        ]
+        ],
+        'newlines-between': 'never'
       }
     ],
     'no-var': ERROR,

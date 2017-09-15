@@ -15,11 +15,15 @@
     "test": "jest",
     "prepublish": "npm run lint && npm run test"
   },
-  "files": ["index.js", "react.js"],
+  "files": [
+    "index.js",
+    "react.js"
+  ],
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^4.6.1",
     "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-import-order-autofix": "^0.8.3",
     "eslint-plugin-prettier": "^2.2.0",
     "jest": "^21.0.2",
     "prettier": "^1.7.0"
@@ -29,6 +33,7 @@
     "eslint": "^4.6.1",
     "eslint-plugin-css-modules": "^2.7.5",
     "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-import-order-autofix": "^0.8.3",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-react": "^7.3.0",

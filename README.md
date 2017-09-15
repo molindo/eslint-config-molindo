@@ -7,7 +7,7 @@ Molindo ESLint config that implements our styleguide and helps to catch errors.
 1. `yarn add eslint-config-molindo --dev`
 2. `touch .eslintrc`, if there isn't already one.
 3. Add `{"extends": "molindo"}` or `{"extends": "molindo/react"}` to `.eslintrc`
-4. As [shared ESLint configs can't include dependencies themselves](https://github.com/eslint/eslint/issues/3458) yet, please install all peer dependencies as dev dependencies. The peers can be found here: `npm info "eslint-config-molindo" peerDependencies`.
+4. As [shared ESLint configs can't include dependencies themselves](https://github.com/eslint/eslint/issues/3458) yet, please install all peer dependencies as dev dependencies. The peers can be found here: `npm info eslint-config-molindo peerDependencies`.
 5. Happy linting!
 
 ## Further configuration

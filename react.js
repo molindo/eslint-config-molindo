@@ -8,12 +8,11 @@ module.exports = Object.assign({}, base, {
     'import/resolver': 'webpack'
   }),
 
-  extends: (base.extends || [])
-    .concat(
-      'plugin:css-modules/recommended',
-      'plugin:jsx-a11y/recommended',
-      'plugin:react/recommended'
-    ),
+  extends: (base.extends || []).concat(
+    'plugin:css-modules/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:react/recommended'
+  ),
 
   rules: Object.assign({}, base.rules, {
     'jsx-a11y/label-has-for': [

@@ -7,7 +7,7 @@ Molindo ESLint config that implements our styleguide and helps to catch errors.
 1. `yarn add eslint-config-molindo --dev`
 2. `touch .eslintrc`, if there isn't already one.
 3. Add `{"extends": "molindo"}` or `{"extends": "molindo/react"}` to `.eslintrc`
-4. As [shared ESLint configs can't include dependencies themselves](https://github.com/eslint/eslint/issues/3458) yet, please install all peer dependencies as dev dependencies. The peers can be found here: `npm info eslint-config-molindo peerDependencies`.
+4. As [shared ESLint configs can't include dependencies themselves](https://github.com/eslint/eslint/issues/3458) yet, please install all peer dependencies as dev dependencies. The peers can be found here: `npm info eslint-config-molindo peerDependencies --json`.
 5. Happy linting!
 
 ## Further configuration
@@ -16,7 +16,7 @@ Molindo ESLint config that implements our styleguide and helps to catch errors.
 
  - Set the [`env` in `.eslintrc`](https://eslint.org/docs/user-guide/configuring#specifying-environments) as necessary (e.g. `{"browser": true, "node": true, "es6": true, "jest": true}`) so ESLint doesn't report missing globals.
 
-## Editor configuration
+## Editor integration
 
 It's strongly recommended to use an eslint integration for your editor of choice (e. g. [linter-eslint](https://atom.io/packages/linter-eslint) for [Atom](https://atom.io/)) so you see warnings and errors while writing code. Also the setting to auto fix errors on save should be turned on, so purely stylistic errors such as the ones reported by `prettier` are fixed automatically.
 

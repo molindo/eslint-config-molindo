@@ -1,5 +1,7 @@
 const base = require('./index');
+
 const ERROR = 'error';
+const OFF = 'off';
 
 module.exports = Object.assign({}, base, {
   plugins: base.plugins.concat('css-modules', 'jsx-a11y', 'react'),
@@ -23,6 +25,7 @@ module.exports = Object.assign({}, base, {
       }
     ],
     'react/default-props-match-prop-types': ERROR,
+    'react/jsx-boolean-value': [ERROR, 'never', {always: []}],
     'react/jsx-handler-names': [
       ERROR,
       {
@@ -41,14 +44,30 @@ module.exports = Object.assign({}, base, {
       }
     ],
     'react/no-unused-prop-types': ERROR,
-    'react/sort-comp': ERROR
+    'react/sort-comp': [
+      ERROR,
+      {
+        order: [
+          'static-methods',
+          'lifecycle',
+          '/^on.+$/',
+          'getters',
+          'setters',
+          '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+          'everything-else',
+          '/^render.+$/',
+          'render'
+        ]
+      }
+    ]
   }),
 
   overrides: (base.overrides || []).concat({
     files: ['src/**/__tests__/*-test.js'],
     rules: {
-      'css-modules/no-unused-class': 0,
-      'react/prop-types': 0
+      'css-modules/no-unused-class': OFF,
+      'react/prop-types': OFF,
+      'react/display-name': OFF
     }
   })
 });

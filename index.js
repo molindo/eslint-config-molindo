@@ -19,6 +19,8 @@ module.exports = {
   rules: {
     'arrow-body-style': [ERROR, 'as-needed'],
     curly: [ERROR, 'multi-line'],
+    eqeqeq: [ERROR, 'always', {null: 'ignore'}],
+    'import/newline-after-import': ERROR,
     'import/no-unresolved': [ERROR, {commonjs: true}],
     'import/no-named-as-default': OFF,
     'import/no-extraneous-dependencies': [

@@ -25,6 +25,7 @@ module.exports = Object.assign({}, base, {
       }
     ],
     'react/default-props-match-prop-types': ERROR,
+    'react/jsx-boolean-value': [ERROR, 'never', {always: []}],
     'react/jsx-handler-names': [
       ERROR,
       {

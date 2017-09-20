@@ -73,6 +73,7 @@ module.exports = {
           boolean: 'Boolean',
           function: 'Function',
           number: 'Number',
+          string: 'String',
           object: 'Object',
           any: '*',
           Any: '*',

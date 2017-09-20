@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-molindo",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Molindo ESLint config that implements our styleguide and helps to catch errors.",
   "main": "index.js",
   "repository": "https://github.com/molindo/eslint-config-molindo",

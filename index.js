@@ -59,6 +59,7 @@ module.exports = {
           'for … of loops should be avoided in favor of array iteration methods. Iteration based on arrays usually shows the intent of the loop clearer and works better with chaining. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods'
       }
     ],
+    'no-shadow': ERROR,
     'object-shorthand': ERROR,
     'prefer-const': ERROR,
     'prettier/prettier': [ERROR, {singleQuote: true, bracketSpacing: false}],

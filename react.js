@@ -26,6 +26,10 @@ module.exports = Object.assign({}, base, {
     ],
     'react/default-props-match-prop-types': ERROR,
     'react/jsx-boolean-value': [ERROR, 'never', {always: []}],
+    'react/jsx-curly-brace-presence': [
+      ERROR,
+      {props: 'never', children: 'ignore'}
+    ],
     'react/jsx-handler-names': [
       ERROR,
       {
@@ -37,13 +41,14 @@ module.exports = Object.assign({}, base, {
     'react/jsx-sort-props': [
       ERROR,
       {
-        ignoreCase: true
-
-        // TODO: Wait for https://github.com/yannickcr/eslint-plugin-react/pull/1340
-        // reservedFirst: ['key', 'ref'],
+        ignoreCase: true,
+        reservedFirst: ['key', 'ref']
       }
     ],
+    'react/no-access-state-in-setstate': ERROR,
     'react/no-unused-prop-types': ERROR,
+    'react/no-unused-state': ERROR,
+    'react/no-typos': ERROR,
     'react/sort-comp': [
       ERROR,
       {

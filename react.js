@@ -46,6 +46,7 @@ module.exports = Object.assign({}, base, {
       }
     ],
     'react/no-access-state-in-setstate': ERROR,
+    'react/no-direct-mutation-state': ERROR,
     'react/no-unused-prop-types': ERROR,
     'react/no-unused-state': ERROR,
     'react/no-typos': ERROR,

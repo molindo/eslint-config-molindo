@@ -20,7 +20,7 @@ Molindo ESLint config that implements our styleguide and helps to catch errors.
 
 It's strongly recommended to use an eslint integration for your editor of choice (e. g. [linter-eslint](https://atom.io/packages/linter-eslint) for [Atom](https://atom.io/)) so you see warnings and errors while writing code. Also the setting to auto fix errors on save should be turned on, so purely stylistic errors such as the ones reported by `prettier` are fixed automatically.
 
-If your linter plugin checks your code as you type (before you save) it can be helpful to silence stylistic errors to reduce noise and let the formatting happen on save. E.g. `linter-eslint` for Atom has the setting "Silence specific rules while typing" which can for example be set to `"prettier/prettier", "react/jsx-sort-props"`.
+If your linter plugin checks your code as you type (before you save) it can be helpful to silence stylistic errors to reduce noise and let the formatting happen on save. E.g. `linter-eslint` for Atom has the setting "Ignore fixable rules while typing".
 
 ## Versioning
 

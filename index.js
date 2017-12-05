@@ -26,7 +26,11 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       ERROR,
       {
-        devDependencies: ['**/__testUtils__/**/*.js', '**/__tests__/*-test.js']
+        devDependencies: [
+          'webpack.config.js',
+          '**/__testUtils__/**/*.js',
+          '**/__tests__/*-test.js'
+        ]
       }
     ],
     'import/order': OFF,
@@ -61,6 +65,7 @@ module.exports = {
     ],
     'no-shadow': ERROR,
     'object-shorthand': ERROR,
+    'prefer-arrow-callback': ERROR,
     'prefer-const': ERROR,
     'prettier/prettier': [ERROR, {singleQuote: true, bracketSpacing: false}],
     'valid-jsdoc': [

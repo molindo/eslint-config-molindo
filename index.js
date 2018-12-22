@@ -29,7 +29,7 @@ module.exports = {
         devDependencies: [
           'webpack.config.js',
           '**/__testUtils__/**/*.js',
-          '**/__tests__/*-test.js'
+          '**/__tests__/**/*-test.js'
         ]
       }
     ],

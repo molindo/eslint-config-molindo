@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     'arrow-body-style': [ERROR, 'as-needed'],
     curly: [ERROR, 'multi-line'],
+    'dot-notation': ERROR,
     eqeqeq: [ERROR, 'always', {null: 'ignore'}],
     'import/newline-after-import': ERROR,
     'import/no-unresolved': [ERROR, {commonjs: true}],

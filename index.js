@@ -45,6 +45,7 @@ module.exports = {
         'newlines-between': 'never'
       }
     ],
+    'no-lonely-if': ERROR,
     'no-var': ERROR,
     'no-unneeded-ternary': ERROR,
     'no-restricted-syntax': [

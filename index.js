@@ -47,6 +47,7 @@ module.exports = {
       }
     ],
     'no-lonely-if': ERROR,
+    'no-throw-literal': ERROR,
     'no-var': ERROR,
     'no-unneeded-ternary': ERROR,
     'no-restricted-syntax': [

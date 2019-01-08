@@ -6,7 +6,7 @@ const OFF = 'off';
 module.exports = {
   parser: 'babel-eslint',
 
-  plugins: ['import', 'import-order-autofix', 'prettier'],
+  plugins: ['import', 'prettier'],
 
   settings: {
     'import/resolver': 'node'
@@ -31,8 +31,7 @@ module.exports = {
         devDependencies: config.testFiles.concat('webpack.config.js')
       }
     ],
-    'import/order': OFF,
-    'import-order-autofix/order': [
+    'import/order': [
       ERROR,
       {
         groups: [

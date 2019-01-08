@@ -17,6 +17,7 @@
   },
   "files": [
     "index.js",
+    "config.js",
     "react.js"
   ],
   "devDependencies": {

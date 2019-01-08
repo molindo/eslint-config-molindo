@@ -1,3 +1,5 @@
+const config = require('./config');
+
 const ERROR = 'error';
 const OFF = 'off';
 
@@ -26,11 +28,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       ERROR,
       {
-        devDependencies: [
-          'webpack.config.js',
-          '**/__testUtils__/**/*.js',
-          '**/__tests__/*-test.js'
-        ]
+        devDependencies: config.testFiles.concat('webpack.config.js')
       }
     ],
     'import/order': OFF,

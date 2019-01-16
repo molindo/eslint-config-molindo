@@ -50,6 +50,7 @@ module.exports = {
     'no-throw-literal': ERROR,
     'no-var': ERROR,
     'no-unneeded-ternary': ERROR,
+    'no-unused-expressions': ERROR,
     'no-restricted-syntax': [
       ERROR,
       {

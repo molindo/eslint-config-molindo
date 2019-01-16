@@ -1,10 +1,12 @@
+const config = require('./config');
+
 const ERROR = 'error';
 const OFF = 'off';
 
 module.exports = {
   parser: 'babel-eslint',
 
-  plugins: ['import', 'import-order-autofix', 'prettier'],
+  plugins: ['import', 'prettier'],
 
   settings: {
     'import/resolver': 'node'
@@ -19,6 +21,7 @@ module.exports = {
   rules: {
     'arrow-body-style': [ERROR, 'as-needed'],
     curly: [ERROR, 'multi-line'],
+    'dot-notation': ERROR,
     eqeqeq: [ERROR, 'always', {null: 'ignore'}],
     'import/newline-after-import': ERROR,
     'import/no-unresolved': [ERROR, {commonjs: true}],
@@ -26,15 +29,10 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       ERROR,
       {
-        devDependencies: [
-          'webpack.config.js',
-          '**/__testUtils__/**/*.js',
-          '**/__tests__/*-test.js'
-        ]
+        devDependencies: config.testFiles.concat('webpack.config.js')
       }
     ],
-    'import/order': OFF,
-    'import-order-autofix/order': [
+    'import/order': [
       ERROR,
       {
         groups: [
@@ -48,8 +46,11 @@ module.exports = {
         'newlines-between': 'never'
       }
     ],
+    'no-lonely-if': ERROR,
+    'no-throw-literal': ERROR,
     'no-var': ERROR,
     'no-unneeded-ternary': ERROR,
+    'no-unused-expressions': ERROR,
     'no-restricted-syntax': [
       ERROR,
       {

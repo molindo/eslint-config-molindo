@@ -1,3 +1,4 @@
+const config = require('./config');
 const base = require('./index');
 
 const ERROR = 'error';
@@ -69,7 +70,7 @@ module.exports = Object.assign({}, base, {
   }),
 
   overrides: (base.overrides || []).concat({
-    files: ['src/**/__tests__/*-test.js'],
+    files: config.testFiles,
     rules: {
       'css-modules/no-unused-class': OFF,
       'react/prop-types': OFF,

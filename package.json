@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-molindo",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Molindo ESLint config that implements our styleguide and helps to catch errors.",
   "main": "index.js",
   "repository": "https://github.com/molindo/eslint-config-molindo",
@@ -36,6 +36,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.3",
+    "eslint-plugin-react-hooks": "^1.6.1",
     "prettier": "^1.15.3"
   }
 }

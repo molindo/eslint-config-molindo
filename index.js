@@ -46,6 +46,7 @@ module.exports = {
         'newlines-between': 'never'
       }
     ],
+    'no-console': [ERROR, {allow: ['warn', 'error']}],
     'no-lonely-if': ERROR,
     'no-restricted-syntax': [
       ERROR,

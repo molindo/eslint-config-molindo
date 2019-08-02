@@ -46,11 +46,8 @@ module.exports = {
         'newlines-between': 'never'
       }
     ],
+    'no-console': [ERROR, {allow: ['warn', 'error']}],
     'no-lonely-if': ERROR,
-    'no-throw-literal': ERROR,
-    'no-var': ERROR,
-    'no-unneeded-ternary': ERROR,
-    'no-unused-expressions': ERROR,
     'no-restricted-syntax': [
       ERROR,
       {
@@ -65,6 +62,11 @@ module.exports = {
       }
     ],
     'no-shadow': ERROR,
+    'no-throw-literal': ERROR,
+    'no-unneeded-ternary': ERROR,
+    'no-unused-expressions': ERROR,
+    'no-use-before-define': [ERROR, {functions: false}],
+    'no-var': ERROR,
     'object-shorthand': ERROR,
     'prefer-arrow-callback': ERROR,
     'prefer-const': ERROR,

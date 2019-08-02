@@ -8,7 +8,11 @@ module.exports = Object.assign({}, base, {
   plugins: base.plugins.concat('css-modules', 'jsx-a11y', 'react'),
 
   settings: Object.assign({}, base.settings, {
-    'import/resolver': 'webpack'
+    'import/resolver': {
+      node: {
+        paths: ['node_modules', 'src']
+      }
+    }
   }),
 
   extends: (base.extends || []).concat(
@@ -39,6 +43,7 @@ module.exports = Object.assign({}, base, {
       }
     ],
     'react/jsx-no-bind': [ERROR, {allowArrowFunctions: true}],
+    'react/jsx-no-target-blank': ERROR,
     'react/jsx-sort-props': [
       ERROR,
       {
@@ -48,9 +53,10 @@ module.exports = Object.assign({}, base, {
     ],
     'react/no-access-state-in-setstate': ERROR,
     'react/no-direct-mutation-state': ERROR,
+    'react/no-this-in-sfc': ERROR,
+    'react/no-typos': ERROR,
     'react/no-unused-prop-types': ERROR,
     'react/no-unused-state': ERROR,
-    'react/no-typos': ERROR,
     'react/sort-comp': [
       ERROR,
       {
@@ -66,7 +72,8 @@ module.exports = Object.assign({}, base, {
           'render'
         ]
       }
-    ]
+    ],
+    'react/sort-prop-types': ERROR
   }),
 
   overrides: (base.overrides || []).concat({

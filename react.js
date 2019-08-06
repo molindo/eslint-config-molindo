@@ -64,6 +64,7 @@ module.exports = Object.assign({}, base, {
     'react/no-typos': ERROR,
     'react/no-unused-prop-types': ERROR,
     'react/no-unused-state': ERROR,
+    'react/self-closing-comp': ERROR,
     'react/sort-comp': [
       ERROR,
       {

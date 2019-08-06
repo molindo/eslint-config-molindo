@@ -5,7 +5,12 @@ const ERROR = 'error';
 const OFF = 'off';
 
 module.exports = Object.assign({}, base, {
-  plugins: base.plugins.concat('css-modules', 'jsx-a11y', 'react'),
+  plugins: base.plugins.concat(
+    'css-modules',
+    'jsx-a11y',
+    'react',
+    'react-hooks'
+  ),
 
   settings: Object.assign({}, base.settings, {
     'import/resolver': {
@@ -30,6 +35,8 @@ module.exports = Object.assign({}, base, {
       }
     ],
     'react/default-props-match-prop-types': ERROR,
+    'react-hooks/rules-of-hooks': ERROR,
+    'react-hooks/exhaustive-deps': ERROR,
     'react/jsx-boolean-value': [ERROR, 'never', {always: []}],
     'react/jsx-curly-brace-presence': [
       ERROR,
@@ -57,6 +64,7 @@ module.exports = Object.assign({}, base, {
     'react/no-typos': ERROR,
     'react/no-unused-prop-types': ERROR,
     'react/no-unused-state': ERROR,
+    'react/self-closing-comp': ERROR,
     'react/sort-comp': [
       ERROR,
       {

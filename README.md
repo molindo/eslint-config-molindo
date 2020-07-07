@@ -24,9 +24,9 @@ Molindo ESLint config that implements our styleguide and helps to catch errors.
 
 | Config | Peer dependencies |
 | ------------- | ------------- | ----- |
-| `molindo/javascript` | `eslint-plugin-import, eslint-plugin-prettier` |
-| `molindo/typescript` | `@typescript-eslint/eslint-plugin, eslint-plugin-import, eslint-plugin-prettier` |
-| `molindo/react` | `eslint-plugin-react, eslint-plugin-react-hooks, eslint-plugin-jsx-a11y, eslint-plugin-css-modules` |
+| `molindo/javascript` | `eslint-plugin-import eslint-plugin-prettier` |
+| `molindo/typescript` | `@typescript-eslint/eslint-plugin eslint-plugin-import eslint-plugin-prettier` |
+| `molindo/react` | `eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-css-modules` |
 
 5. If you use TypeScript, add `"extends": "eslint-config-molindo/tsconfig.json"` to your `tsconfig.json`.
 6. Happy linting!

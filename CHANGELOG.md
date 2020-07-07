@@ -13,6 +13,7 @@
 
  - Keep `trailingComma: 'none'` for newer prettier versions.
  - Keep auto fix behaviour of `react-hooks/exhaustive-deps` in more recent versions.
+ - Replace `jsx-a11y/label-has-for` with `jsx-a11y/label-has-associated-control`.
 
 ### Breaking changes
 

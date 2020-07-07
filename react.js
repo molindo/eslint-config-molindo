@@ -24,13 +24,7 @@ module.exports = {
   ],
 
   rules: {
-    'jsx-a11y/label-has-for': [
-      ERROR,
-      {
-        required: {every: ['nesting']},
-        allowChildren: true
-      }
-    ],
+    'jsx-a11y/label-has-associated-control': ERROR,
     'react/default-props-match-prop-types': ERROR,
     'react-hooks/rules-of-hooks': ERROR,
     'react-hooks/exhaustive-deps': [

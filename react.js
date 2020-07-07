@@ -1,32 +1,29 @@
 const config = require('./config');
-const base = require('./index');
 
 const ERROR = 'error';
 const OFF = 'off';
 
-module.exports = Object.assign({}, base, {
-  plugins: base.plugins.concat(
-    'css-modules',
-    'jsx-a11y',
-    'react',
-    'react-hooks'
-  ),
+module.exports = {
+  plugins: ['css-modules', 'jsx-a11y', 'react', 'react-hooks'],
 
-  settings: Object.assign({}, base.settings, {
+  settings: {
+    react: {
+      version: 'detect'
+    },
     'import/resolver': {
       node: {
         paths: ['node_modules', 'src']
       }
     }
-  }),
+  },
 
-  extends: (base.extends || []).concat(
+  extends: [
     'plugin:css-modules/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended'
-  ),
+  ],
 
-  rules: Object.assign({}, base.rules, {
+  rules: {
     'jsx-a11y/label-has-for': [
       ERROR,
       {
@@ -82,14 +79,16 @@ module.exports = Object.assign({}, base, {
       }
     ],
     'react/sort-prop-types': ERROR
-  }),
+  },
 
-  overrides: (base.overrides || []).concat({
-    files: config.testFiles,
-    rules: {
-      'css-modules/no-unused-class': OFF,
-      'react/prop-types': OFF,
-      'react/display-name': OFF
+  overrides: [
+    {
+      files: config.testFiles,
+      rules: {
+        'css-modules/no-unused-class': OFF,
+        'react/prop-types': OFF,
+        'react/display-name': OFF
+      }
     }
-  })
-});
+  ]
+};

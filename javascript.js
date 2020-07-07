@@ -70,7 +70,10 @@ module.exports = {
     'object-shorthand': ERROR,
     'prefer-arrow-callback': ERROR,
     'prefer-const': ERROR,
-    'prettier/prettier': [ERROR, {singleQuote: true, bracketSpacing: false}],
+    'prettier/prettier': [
+      ERROR,
+      {singleQuote: true, bracketSpacing: false, trailingComma: 'none'}
+    ],
     'valid-jsdoc': [
       ERROR,
       {

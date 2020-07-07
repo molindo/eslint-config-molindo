@@ -33,7 +33,13 @@ module.exports = {
     ],
     'react/default-props-match-prop-types': ERROR,
     'react-hooks/rules-of-hooks': ERROR,
-    'react-hooks/exhaustive-deps': ERROR,
+    'react-hooks/exhaustive-deps': [
+      ERROR,
+      // Since we throw on missing deps it's not a question of whether or not
+      // the deps are added, but rather if you have to do it manually or
+      // automatically. Therefore go for the automatic fix.
+      {enableDangerousAutofixThisMayCauseInfiniteLoops: true}
+    ],
     'react/jsx-boolean-value': [ERROR, 'never', {always: []}],
     'react/jsx-curly-brace-presence': [
       ERROR,

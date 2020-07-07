@@ -12,6 +12,7 @@
 ### Fixes
 
  - Keep `trailingComma: 'none'` for newer prettier versions.
+ - Keep auto fix behaviour of `react-hooks/exhaustive-deps` in more recent versions.
 
 ### Breaking changes
 

@@ -23,6 +23,8 @@ module.exports = {
     curly: [ERROR, 'multi-line'],
     'dot-notation': ERROR,
     eqeqeq: [ERROR, 'always', {null: 'ignore'}],
+    // See discussion in https://github.com/molindo/eslint-config-molindo/issues/27
+    'func-style': [ERROR, 'declaration', {allowArrowFunctions: false}],
     'import/newline-after-import': ERROR,
     'import/no-unresolved': [ERROR, {commonjs: true}],
     'import/no-named-as-default': OFF,

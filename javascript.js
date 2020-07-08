@@ -1,3 +1,4 @@
+const confusingBrowserGlobals = require('confusing-browser-globals');
 const config = require('./config');
 
 const ERROR = 'error';
@@ -51,6 +52,7 @@ module.exports = {
     ],
     'no-console': [ERROR, {allow: ['warn', 'error']}],
     'no-lonely-if': ERROR,
+    'no-restricted-globals': [ERROR].concat(confusingBrowserGlobals),
     'no-restricted-syntax': [
       ERROR,
       {

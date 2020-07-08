@@ -8,6 +8,7 @@
  - Add automatic version detection for React.
  - Allow more recent versions of dependencies.
  - Move some peer dependencies to dependencies if they can be installed automatically.
+ - Warn about [confusing browser globals](https://www.npmjs.com/package/confusing-browser-globals).
 
 ### Fixes
 

@@ -9,6 +9,7 @@
  - Allow more recent versions of dependencies.
  - Move some peer dependencies to dependencies if they can be installed automatically.
  - Warn about [confusing browser globals](https://www.npmjs.com/package/confusing-browser-globals) when accessing them without `window`.
+ - Sort desctructured keys when using the React config (useful for destructured props to match the prop type definition).
 
 ### Fixes
 
@@ -23,3 +24,4 @@
  - Require a minimum version of Node.js 10
  - Use `eslint@^7.0.0`
  - A declaration style is now enforced for functions. Since there's no auto fix, it's probably the best option to override this rule in existing code bases which use a different style extensively.
+ - The React config has a new peer dependency on `eslint-plugin-sort-destructure-keys`.

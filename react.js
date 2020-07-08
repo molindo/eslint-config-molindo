@@ -4,7 +4,13 @@ const ERROR = 'error';
 const OFF = 'off';
 
 module.exports = {
-  plugins: ['css-modules', 'jsx-a11y', 'react', 'react-hooks'],
+  plugins: [
+    'css-modules',
+    'jsx-a11y',
+    'react',
+    'react-hooks',
+    'sort-destructure-keys'
+  ],
 
   settings: {
     react: {
@@ -78,7 +84,8 @@ module.exports = {
         ]
       }
     ],
-    'react/sort-prop-types': ERROR
+    'react/sort-prop-types': ERROR,
+    'sort-destructure-keys/sort-destructure-keys': ERROR
   },
 
   overrides: [

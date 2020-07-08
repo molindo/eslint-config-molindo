@@ -28,6 +28,7 @@ module.exports = Object.assign({}, javascript, {
     '@typescript-eslint/no-inferrable-types': ERROR,
     '@typescript-eslint/no-misused-promises': ERROR,
     '@typescript-eslint/no-unused-vars': ERROR,
+    '@typescript-eslint/no-var-requires': OFF,
     '@typescript-eslint/switch-exhaustiveness-check': ERROR,
     '@typescript-eslint/explicit-member-accessibility': [
       ERROR,

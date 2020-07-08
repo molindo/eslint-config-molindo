@@ -5,8 +5,7 @@ Molindo ESLint config that implements our styleguide and helps to catch errors.
 ## Usage
 
 1. `yarn add eslint-config-molindo --dev`
-2. `touch .eslintrc`, if there isn't already one.
-3. Extend the relevant configs in `.eslintrc`:
+2. Extend the relevant configs in `.eslintrc`:
 
 ```js
 {
@@ -20,16 +19,8 @@ Molindo ESLint config that implements our styleguide and helps to catch errors.
 }
 ```
 
-4. As [shared ESLint configs can't include dependencies themselves](https://github.com/eslint/eslint/issues/3458) yet, please install all peer dependencies as dev dependencies:
-
-| Config | Peer dependencies |
-| ------------- | ------------- | ----- |
-| `molindo/javascript` | `eslint-plugin-import eslint-plugin-prettier` |
-| `molindo/typescript` | `@typescript-eslint/eslint-plugin eslint-plugin-import eslint-plugin-prettier` |
-| `molindo/react` | `eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-css-modules eslint-plugin-sort-destructure-keys` |
-
-5. If you use TypeScript, add `"extends": "eslint-config-molindo/tsconfig.json"` to your `tsconfig.json`.
-6. Happy linting!
+3. If you use TypeScript, add `"extends": "eslint-config-molindo/tsconfig.json"` to your `tsconfig.json`.
+4. Happy linting!
 
 ## Further configuration
 

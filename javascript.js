@@ -51,7 +51,6 @@ module.exports = {
       }
     ],
     'no-console': [ERROR, {allow: ['warn', 'error']}],
-    'no-lonely-if': ERROR,
     'no-restricted-globals': [ERROR].concat(confusingBrowserGlobals),
     'no-restricted-syntax': [
       ERROR,

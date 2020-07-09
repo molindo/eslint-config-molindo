@@ -20,6 +20,7 @@ module.exports = {
   ],
 
   rules: {
+    'array-callback-return': ERROR,
     'arrow-body-style': [ERROR, 'as-needed'],
     curly: [ERROR, 'multi-line'],
     'dot-notation': ERROR,

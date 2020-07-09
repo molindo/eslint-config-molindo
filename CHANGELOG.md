@@ -4,8 +4,8 @@
 
 ### Features
 
- - Typescript support.
- - Remove peer dependencies in favour of actual dependencies since ESLint 7 resolves them correctly.
+ - TypeScript support.
+ - Remove peer dependencies in favour of actual dependencies.
  - Add automatic version detection for React.
  - Allow more recent versions of dependencies.
  - Warn about [confusing browser globals](https://www.npmjs.com/package/confusing-browser-globals) when accessing them without `window`.

@@ -72,7 +72,10 @@ module.exports = {
       ERROR,
       {
         order: [
+          'type-annotations',
+          'static-variables',
           'static-methods',
+          'instance-variables',
           'lifecycle',
           '/^on.+$/',
           'getters',

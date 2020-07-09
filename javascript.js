@@ -60,11 +60,6 @@ module.exports = {
         selector: 'ForInStatement',
         message:
           'for … in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries} and iterate over the resulting array. Iteration based on arrays usually shows the intent of the loop clearer and works better with chaining. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods'
-      },
-      {
-        selector: 'ForOfStatement',
-        message:
-          'for … of loops should be avoided in favor of array iteration methods. Iteration based on arrays usually shows the intent of the loop clearer and works better with chaining. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods'
       }
     ],
     'no-shadow': ERROR,

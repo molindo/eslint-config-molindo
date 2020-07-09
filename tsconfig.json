@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
   }
 }

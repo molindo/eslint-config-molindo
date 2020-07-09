@@ -7,7 +7,7 @@ const OFF = 'off';
 module.exports = {
   parser: 'babel-eslint',
 
-  plugins: ['import', 'prettier'],
+  plugins: ['import', 'prettier', 'unicorn'],
 
   settings: {
     'import/resolver': 'node'
@@ -78,6 +78,9 @@ module.exports = {
       ERROR,
       {singleQuote: true, bracketSpacing: false, trailingComma: 'none'}
     ],
+    'unicorn/explicit-length-check': ERROR,
+    'unicorn/import-index': ERROR,
+    'unicorn/no-abusive-eslint-disable': ERROR,
     'valid-jsdoc': [
       ERROR,
       {

@@ -10,6 +10,7 @@
  - Remove peer dependencies in favour of actual dependencies since ESLint 7 resolves them correctly.
  - Warn about [confusing browser globals](https://www.npmjs.com/package/confusing-browser-globals) when accessing them without `window`.
  - Sort desctructured keys when using the React config (useful for destructured props to match the prop type definition).
+ - Add useful rules from [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn): `unicorn/explicit-length-check`, `unicorn/import-index`, `unicorn/no-abusive-eslint-disable`
 
 ### Fixes
 

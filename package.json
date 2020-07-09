@@ -15,6 +15,7 @@
     "prepublish": "npm run lint && npm run test"
   },
   "files": [
+    "setupPlugins.js",
     "javascript.js",
     "typescript.js",
     "config.js",
@@ -41,6 +42,7 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.6",
     "eslint-plugin-sort-destructure-keys": "^1.3.5",
+    "eslint-plugin-unicorn": "^20.1.0",
     "prettier": "^2.0.0",
     "typescript": "^3.0.0"
   },

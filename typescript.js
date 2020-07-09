@@ -7,7 +7,8 @@ module.exports = Object.assign({}, javascript, {
   parser: '@typescript-eslint/parser',
   plugins: javascript.plugins.concat('@typescript-eslint'),
   extends: (javascript.extends || []).concat(
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/typescript'
   ),
   parserOptions: {
     project: './tsconfig.json'

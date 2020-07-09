@@ -47,7 +47,8 @@ module.exports = {
           'sibling',
           'index'
         ],
-        'newlines-between': 'never'
+        'newlines-between': 'never',
+        alphabetize: {order: 'asc'}
       }
     ],
     'no-console': [ERROR, {allow: ['warn', 'error']}],

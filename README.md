@@ -5,17 +5,21 @@ Molindo ESLint config that implements our styleguide and helps to catch errors.
 ## Usage
 
 1. `yarn add eslint-config-molindo --dev`
-2. Extend the relevant configs in `.eslintrc`:
+2. Setup your project config in `.eslintrc.js`:
 
 ```js
-{
-  "extends": "molindo/javascript",
+// This enables ESLint to use dependencies of this config
+// (see https://github.com/eslint/eslint/issues/3458)
+require('eslint-config-molindo/setupPlugins');
+
+module.exports = {
+  extends: 'molindo/javascript',
   // or
-  "extends": "molindo/typescript",
+  extends: 'molindo/typescript',
   // or
-  "extends": ["molindo/javascript", "molindo/react"],
+  extends: ['molindo/javascript', 'molindo/react'],
   // or
-  "extends": ["molindo/typescript", "molindo/react"]
+  extends: ['molindo/typescript', 'molindo/react']
 }
 ```
 

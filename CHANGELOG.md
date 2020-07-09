@@ -22,6 +22,7 @@
 
  - The base JavaScript config `molindo` was renamed to `molindo/javascript`.
  - The base JavaScript config is no longer included in the React config. Use `"extends": ["molindo/javascript", "molindo/react"]` to use both.
- - Require a minimum version of Node.js 10
- - Use `eslint@^7.0.0`
+ - Require a minimum version of Node.js 10.
+ - Use `eslint@^7.0.0`.
  - A declaration style is now enforced for functions. Since there's no auto fix, it's probably the best option to override this rule in existing code bases which use a different style extensively.
+ - This config now installs the relevant plugins automatically. However you have to use the JavaScript version of the ESLint config (`.eslintrc.js`) and add `require('eslint-config-molindo/setupPlugins')` there. Alternatively you can still install all necessary plugins yourself.

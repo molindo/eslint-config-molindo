@@ -34,7 +34,10 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       ERROR,
       {
-        devDependencies: config.testFiles.concat('webpack.config.js')
+        devDependencies: config.testFiles.concat(
+          'webpack.config.js',
+          '.eslintrc.js'
+        )
       }
     ],
     'import/order': [

@@ -1,6 +1,10 @@
 # eslint-config-molindo
 
-Molindo ESLint config that implements our styleguide and helps to catch errors.
+## Goals
+
+1. Find errors that are detectable with static analysis.
+2. Make reading code easier by providing consistent code style.
+3. Make writing code faster by leveraging auto fix wherever possible.
 
 ## Usage
 

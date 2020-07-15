@@ -8,7 +8,7 @@
 
 ## Usage
 
-1. `yarn add eslint-config-molindo --dev`
+1. `yarn add eslint eslint-config-molindo --dev`
 2. Setup your project config in `.eslintrc.js`:
 
 ```js

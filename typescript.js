@@ -21,6 +21,7 @@ module.exports = Object.assign({}, javascript, {
     'import/no-unresolved': OFF,
     '@typescript-eslint/array-type': [ERROR, {default: 'generic'}],
     '@typescript-eslint/await-thenable': ERROR,
+    '@typescript-eslint/ban-ts-comment': OFF,
     // Avoid declaring the implied return type for React components
     '@typescript-eslint/explicit-module-boundary-types': OFF,
     '@typescript-eslint/method-signature-style': [ERROR, 'method'],

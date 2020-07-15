@@ -1,4 +1,4 @@
-module.exports = Object.assign({}, require('./index.js'), {
+module.exports = Object.assign({}, require('./javascript.js'), {
   env: {
     node: true,
     jest: true

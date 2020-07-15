@@ -1,42 +1,46 @@
 const config = require('./config');
-const base = require('./index');
 
 const ERROR = 'error';
 const OFF = 'off';
 
-module.exports = Object.assign({}, base, {
-  plugins: base.plugins.concat(
+module.exports = {
+  plugins: [
     'css-modules',
     'jsx-a11y',
     'react',
-    'react-hooks'
-  ),
+    'react-hooks',
+    'sort-destructure-keys'
+  ],
 
-  settings: Object.assign({}, base.settings, {
+  settings: {
+    react: {
+      version: 'detect'
+    },
     'import/resolver': {
       node: {
         paths: ['node_modules', 'src']
       }
     }
-  }),
+  },
 
-  extends: (base.extends || []).concat(
+  extends: [
     'plugin:css-modules/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended'
-  ),
+  ],
 
-  rules: Object.assign({}, base.rules, {
-    'jsx-a11y/label-has-for': [
-      ERROR,
-      {
-        required: {every: ['nesting']},
-        allowChildren: true
-      }
-    ],
+  rules: {
+    'jsx-a11y/label-has-associated-control': ERROR,
+    'react/button-has-type': ERROR,
     'react/default-props-match-prop-types': ERROR,
     'react-hooks/rules-of-hooks': ERROR,
-    'react-hooks/exhaustive-deps': ERROR,
+    'react-hooks/exhaustive-deps': [
+      ERROR,
+      // Since we throw on missing deps, it's not a question of whether or not
+      // the deps are added, but rather if you have to do it manually or
+      // automatically. Therefore go for the automatic fix.
+      {enableDangerousAutofixThisMayCauseInfiniteLoops: true}
+    ],
     'react/jsx-boolean-value': [ERROR, 'never', {always: []}],
     'react/jsx-curly-brace-presence': [
       ERROR,
@@ -69,7 +73,10 @@ module.exports = Object.assign({}, base, {
       ERROR,
       {
         order: [
+          'type-annotations',
+          'static-variables',
           'static-methods',
+          'instance-variables',
           'lifecycle',
           '/^on.+$/',
           'getters',
@@ -81,15 +88,18 @@ module.exports = Object.assign({}, base, {
         ]
       }
     ],
-    'react/sort-prop-types': ERROR
-  }),
+    'react/sort-prop-types': ERROR,
+    'sort-destructure-keys/sort-destructure-keys': ERROR
+  },
 
-  overrides: (base.overrides || []).concat({
-    files: config.testFiles,
-    rules: {
-      'css-modules/no-unused-class': OFF,
-      'react/prop-types': OFF,
-      'react/display-name': OFF
+  overrides: [
+    {
+      files: config.testFiles,
+      rules: {
+        'css-modules/no-unused-class': OFF,
+        'react/prop-types': OFF,
+        'react/display-name': OFF
+      }
     }
-  })
-});
+  ]
+};

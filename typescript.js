@@ -36,6 +36,8 @@ module.exports = Object.assign({}, javascript, {
     '@typescript-eslint/explicit-member-accessibility': [
       ERROR,
       {accessibility: 'explicit', overrides: {constructors: 'no-public'}}
-    ]
+    ],
+    // Don't require duplicate type annotations.
+    'valid-jsdoc': OFF
   })
 });

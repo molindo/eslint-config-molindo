@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 5.0.2
+
+### Fixes
+
+ - Compatibility with ESLint 7.23.0
+
 ## 5.0.0
 
 ### Features

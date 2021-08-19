@@ -20,6 +20,8 @@
     "typescript.js",
     "config.js",
     "react.js",
+    "jest.js",
+    "cypress.js",
     "tsconfig.json"
   ],
   "devDependencies": {

@@ -5,6 +5,7 @@
 ### Features
 
  - Add `jest` config
+ - Add `cypress` config
  - Add `no-useless-rename`
  - Add `spaced-comment`
 

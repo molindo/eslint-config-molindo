@@ -21,7 +21,8 @@ module.exports = {
   extends: [
     'molindo/javascript', // Or `molindo/typescript`
     'molindo/react', // Optional
-    'molindo/jest' // Optional
+    'molindo/jest', // Optional
+    'molindo/cypress' // Optional
   ]
 }
 ```

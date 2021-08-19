@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 5.0.3
+
+### Fixes
+
+ - Avoid errors in JavaScript files in TypeScript projects
+
 ## 5.0.2
 
 ### Fixes

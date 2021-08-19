@@ -1,7 +1,5 @@
+const {ERROR, OFF} = require('./config');
 const javascript = require('./javascript');
-
-const ERROR = 'error';
-const OFF = 'off';
 
 module.exports = Object.assign({}, javascript, {
   parser: '@typescript-eslint/parser',

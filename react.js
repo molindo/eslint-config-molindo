@@ -1,7 +1,4 @@
-const config = require('./config');
-
-const ERROR = 'error';
-const OFF = 'off';
+const {testFiles, ERROR, OFF} = require('./config');
 
 module.exports = {
   plugins: [
@@ -41,6 +38,7 @@ module.exports = {
       // automatically. Therefore go for the automatic fix.
       {enableDangerousAutofixThisMayCauseInfiniteLoops: true}
     ],
+    'react/react-in-jsx-scope': OFF,
     'react/jsx-boolean-value': [ERROR, 'never', {always: []}],
     'react/jsx-curly-brace-presence': [
       ERROR,
@@ -94,7 +92,7 @@ module.exports = {
 
   overrides: [
     {
-      files: config.testFiles,
+      files: testFiles,
       rules: {
         'css-modules/no-unused-class': OFF,
         'react/prop-types': OFF,

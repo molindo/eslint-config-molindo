@@ -1,10 +1,17 @@
 # CHANGELOG
 
-## 5.0.3
+## 6.0.0
+
+### Features
+
+ - Add `jest` config
+ - Add `no-useless-rename`
+ - Add `spaced-comment`
 
 ### Fixes
 
  - Avoid errors in JavaScript files in TypeScript projects
+ - Disable `react/react-in-jsx-scope`
 
 ## 5.0.2
 

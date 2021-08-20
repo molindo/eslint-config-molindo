@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 5.1.0
+
+### Features
+
+ - Add `jest` config
+ - Add `cypress` config
+ - Add `no-useless-rename`
+ - Add `spaced-comment`
+
+### Fixes
+
+ - Avoid errors in JavaScript files in TypeScript projects
+ - Disable `react/react-in-jsx-scope`
+
 ## 5.0.2
 
 ### Fixes

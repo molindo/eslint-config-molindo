@@ -1,8 +1,5 @@
 const confusingBrowserGlobals = require('confusing-browser-globals');
-const config = require('./config');
-
-const ERROR = 'error';
-const OFF = 'off';
+const {testFiles, ERROR, OFF} = require('./config');
 
 module.exports = {
   parser: 'babel-eslint',
@@ -34,10 +31,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       ERROR,
       {
-        devDependencies: config.testFiles.concat(
-          'webpack.config.js',
-          '.eslintrc.js'
-        )
+        devDependencies: testFiles.concat('webpack.config.js', '.eslintrc.js')
       }
     ],
     'import/order': [
@@ -70,6 +64,7 @@ module.exports = {
     'no-unneeded-ternary': ERROR,
     'no-unused-expressions': ERROR,
     'no-use-before-define': [ERROR, {functions: false}],
+    'no-useless-rename': ERROR,
     'no-var': ERROR,
     'object-shorthand': ERROR,
     'prefer-arrow-callback': ERROR,
@@ -78,6 +73,7 @@ module.exports = {
       ERROR,
       {singleQuote: true, bracketSpacing: false, trailingComma: 'none'}
     ],
+    'spaced-comment': ERROR,
     'unicorn/explicit-length-check': ERROR,
     'unicorn/import-index': ERROR,
     'unicorn/no-abusive-eslint-disable': ERROR,

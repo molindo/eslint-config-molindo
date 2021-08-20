@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-molindo",
-  "version": "5.0.2",
+  "version": "5.1.0",
   "description": "Molindo ESLint config that implements our styleguide and helps to catch errors.",
   "repository": "https://github.com/molindo/eslint-config-molindo",
   "author": "Jan Amann <jam@molindo.at>",
@@ -20,6 +20,8 @@
     "typescript.js",
     "config.js",
     "react.js",
+    "jest.js",
+    "cypress.js",
     "tsconfig.json"
   ],
   "devDependencies": {
@@ -37,6 +39,7 @@
     "confusing-browser-globals": "^1.0.0",
     "eslint-plugin-css-modules": "^2.11.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",

@@ -17,13 +17,13 @@
 require('eslint-config-molindo/setupPlugins');
 
 module.exports = {
-  extends: 'molindo/javascript',
-  // or
-  extends: 'molindo/typescript',
-  // or
-  extends: ['molindo/javascript', 'molindo/react'],
-  // or
-  extends: ['molindo/typescript', 'molindo/react']
+  // Add configs based on your needs
+  extends: [
+    'molindo/javascript', // Or `molindo/typescript`
+    'molindo/react', // Optional
+    'molindo/jest', // Optional
+    'molindo/cypress' // Optional
+  ]
 }
 ```
 

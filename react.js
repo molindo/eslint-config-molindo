@@ -51,7 +51,10 @@ module.exports = {
         eventHandlerPropPrefix: 'on'
       }
     ],
-    'react/jsx-no-bind': [ERROR, {allowArrowFunctions: true}],
+    'react/jsx-no-bind': [
+      ERROR,
+      {allowArrowFunctions: true, allowFunctions: true}
+    ],
     'react/jsx-no-target-blank': ERROR,
     'react/jsx-sort-props': [
       ERROR,

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 5.1.1
+
+### Fixes
+
+ - Add `allowFunctions` to `react/jsx-no-bind` rule.
+
 ## 5.1.0
 
 ### Features

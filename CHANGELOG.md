@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 5.2.0
+
+### Features
+
+ - Upgrade to TypeScript 4
+
+### Fixes
+
+ - Disable TypeScript rules which cause false positives.
+
 ## 5.1.1
 
 ### Fixes

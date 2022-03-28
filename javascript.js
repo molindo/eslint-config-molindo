@@ -73,7 +73,16 @@ module.exports = {
       ERROR,
       {singleQuote: true, bracketSpacing: false, trailingComma: 'none'}
     ],
-    'spaced-comment': ERROR,
+    'spaced-comment': [
+      ERROR,
+      'always',
+      {
+        line: {
+          markers: ['/'],
+          exceptions: ['/']
+        }
+      }
+    ],
     'unicorn/explicit-length-check': ERROR,
     'unicorn/import-index': ERROR,
     'unicorn/no-abusive-eslint-disable': ERROR,

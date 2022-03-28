@@ -19,6 +19,8 @@ module.exports = Object.assign({}, javascript, {
         project: './tsconfig.json'
       },
       rules: {
+        // Creates false positives (see https://github.com/molindo/eslint-config-molindo/issues/70)
+        'import/export': OFF,
         // Use the one from TypeScript instead
         'no-unused-vars': OFF,
         // The TypeScript compiler takes care of this
@@ -33,6 +35,8 @@ module.exports = Object.assign({}, javascript, {
         '@typescript-eslint/no-for-in-array': ERROR,
         '@typescript-eslint/no-inferrable-types': ERROR,
         '@typescript-eslint/no-misused-promises': ERROR,
+        '@typescript-eslint/no-empty-interface': ERROR,
+        '@typescript-eslint/no-empty-function': ERROR,
         '@typescript-eslint/no-non-null-assertion': OFF,
         '@typescript-eslint/no-unused-vars': ERROR,
         '@typescript-eslint/no-var-requires': OFF,

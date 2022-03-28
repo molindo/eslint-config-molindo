@@ -76,6 +76,8 @@ module.exports = {
     'spaced-comment': [
       ERROR,
       'always',
+      // Allow TypeScript reference imports with tripple slashes
+      // https://github.com/molindo/eslint-config-molindo/issues/69
       {
         line: {
           markers: ['/'],

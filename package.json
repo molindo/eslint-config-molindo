@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-molindo",
-  "version": "5.2.0-alpha.5",
+  "version": "5.2.0-alpha.6",
   "description": "Molindo ESLint config that implements our styleguide and helps to catch errors.",
   "repository": "https://github.com/molindo/eslint-config-molindo",
   "author": "Jan Amann <jam@molindo.at>",

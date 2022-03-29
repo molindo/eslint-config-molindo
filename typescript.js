@@ -26,8 +26,9 @@ module.exports = Object.assign({}, javascript, {
       rules: {
         // Creates false positives (see https://github.com/molindo/eslint-config-molindo/issues/70)
         'import/export': OFF,
-        // Use the one from TypeScript instead
+        // Use the TypeScript alternatives
         'no-unused-vars': OFF,
+        'no-shadow': OFF,
         // The TypeScript compiler takes care of this
         'import/no-unresolved': OFF,
         '@typescript-eslint/array-type': [ERROR, {default: 'generic'}],
@@ -45,6 +46,7 @@ module.exports = Object.assign({}, javascript, {
         '@typescript-eslint/no-empty-interface': OFF,
         '@typescript-eslint/no-empty-function': OFF,
         '@typescript-eslint/no-non-null-assertion': OFF,
+        '@typescript-eslint/no-shadow': [ERROR],
         '@typescript-eslint/no-unused-vars': ERROR,
         '@typescript-eslint/no-var-requires': OFF,
         '@typescript-eslint/switch-exhaustiveness-check': ERROR,

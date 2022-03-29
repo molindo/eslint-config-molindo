@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 5.2.0
+## 6.0.0
 
 ### Features
 
@@ -9,6 +9,11 @@
 ### Fixes
 
  - Disable TypeScript rules which cause false positives.
+ - Disallow `describe.only`
+
+### Breaking changes
+
+ - Requires ESLint 8
 
 ## 5.1.1
 

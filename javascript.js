@@ -1,5 +1,5 @@
 const confusingBrowserGlobals = require('confusing-browser-globals');
-const {testFiles, ERROR, OFF} = require('./config');
+const {ERROR, OFF, testFiles} = require('./config');
 
 module.exports = {
   parserOptions: {

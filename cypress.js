@@ -4,12 +4,12 @@ module.exports = {
   rules: {
     'no-restricted-properties': [
       ERROR,
-      {
-        object: 'it',
+      ['it', 'describe', 'test'].map((name) => ({
+        object: name,
         property: 'only',
         message:
           'This should only be used for debugging and removed afterwards.'
-      }
+      }))
     ]
   }
 };

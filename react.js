@@ -1,4 +1,4 @@
-const {testFiles, ERROR, OFF} = require('./config');
+const {ERROR, OFF, testFiles} = require('./config');
 
 module.exports = {
   plugins: [

@@ -1,4 +1,4 @@
-const {ERROR} = require('./config');
+const {ERROR, OFF} = require('./config');
 
 module.exports = {
   plugins: ['jest'],
@@ -6,6 +6,7 @@ module.exports = {
   extends: ['plugin:jest/recommended'],
 
   rules: {
+    'jest/expect-expect': OFF,
     'jest/consistent-test-it': [
       ERROR,
       {

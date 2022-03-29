@@ -12,6 +12,11 @@ module.exports = Object.assign({}, javascript, {
     {
       files: ['**/*.ts', '**/*.tsx'],
       extends: (javascript.extends || []).concat(
+        // This is a compatibility ruleset that:
+        // 1. Disables rules from eslint:recommended which are already handled by TypeScript.
+        // 2. Enables rules that make sense due to TS's typechecking / transpilation.
+        'plugin:@typescript-eslint/eslint-recommended',
+
         'plugin:@typescript-eslint/recommended',
         'plugin:import/typescript'
       ),

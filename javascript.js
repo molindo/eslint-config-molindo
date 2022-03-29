@@ -2,7 +2,9 @@ const confusingBrowserGlobals = require('confusing-browser-globals');
 const {testFiles, ERROR, OFF} = require('./config');
 
 module.exports = {
-  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 'latest'
+  },
 
   plugins: ['import', 'prettier', 'unicorn'],
 

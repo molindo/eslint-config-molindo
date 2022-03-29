@@ -4,7 +4,7 @@ module.exports = {
   rules: {
     'no-restricted-properties': [
       ERROR,
-      ['it', 'describe', 'test'].map((name) => ({
+      ...['it', 'describe', 'test'].map((name) => ({
         object: name,
         property: 'only',
         message:

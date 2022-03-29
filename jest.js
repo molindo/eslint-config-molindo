@@ -14,6 +14,6 @@ module.exports = {
         withinDescribe: 'it'
       }
     ],
-    'prefer-lowercase-title': [ERROR, {ignore: ['describe']}]
+    'jest/prefer-lowercase-title': [ERROR, {ignore: ['describe']}]
   }
 };

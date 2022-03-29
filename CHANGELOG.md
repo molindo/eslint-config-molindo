@@ -9,7 +9,7 @@
 ### Fixes
 
  - Disable TypeScript rules which cause false positives.
- - Disallow `describe.only`
+ - Disallow `describe.only`.
 
 ### Breaking changes
 

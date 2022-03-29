@@ -1,6 +1,10 @@
-module.exports = Object.assign({}, require('./javascript.js'), {
-  env: {
-    node: true,
-    jest: true
+module.exports = Object.assign(
+  {},
+  {
+    extends: ['./javascript', './typescript', './cypress', './jest', './react'],
+    env: {
+      node: true,
+      jest: true
+    }
   }
-});
+);

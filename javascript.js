@@ -1,8 +1,10 @@
 const confusingBrowserGlobals = require('confusing-browser-globals');
-const {testFiles, ERROR, OFF} = require('./config');
+const {ERROR, OFF, testFiles} = require('./config');
 
 module.exports = {
-  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 'latest'
+  },
 
   plugins: ['import', 'prettier', 'unicorn'],
 
@@ -73,7 +75,18 @@ module.exports = {
       ERROR,
       {singleQuote: true, bracketSpacing: false, trailingComma: 'none'}
     ],
-    'spaced-comment': ERROR,
+    'spaced-comment': [
+      ERROR,
+      'always',
+      // Allow TypeScript reference imports with tripple slashes
+      // https://github.com/molindo/eslint-config-molindo/issues/69
+      {
+        line: {
+          markers: ['/'],
+          exceptions: ['/']
+        }
+      }
+    ],
     'unicorn/explicit-length-check': ERROR,
     'unicorn/import-index': ERROR,
     'unicorn/no-abusive-eslint-disable': ERROR,

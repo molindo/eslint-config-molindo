@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 6.0.0
+
+### Features
+
+ - Upgrade to TypeScript 4
+
+### Fixes
+
+ - Disable TypeScript rules which cause false positives.
+ - Disallow `describe.only`.
+
+### Breaking changes
+
+ - Requires ESLint 8
+
 ## 5.1.1
 
 ### Fixes

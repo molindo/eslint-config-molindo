@@ -1,4 +1,4 @@
-const {ERROR} = require('./config');
+const {ERROR, OFF} = require('./config');
 
 module.exports = {
   plugins: ['jest'],
@@ -6,6 +6,7 @@ module.exports = {
   extends: ['plugin:jest/recommended'],
 
   rules: {
+    'jest/expect-expect': OFF,
     'jest/consistent-test-it': [
       ERROR,
       {
@@ -13,6 +14,6 @@ module.exports = {
         withinDescribe: 'it'
       }
     ],
-    'lowercase-name': [ERROR, {ignore: ['describe']}]
+    'jest/prefer-lowercase-title': [ERROR, {ignore: ['describe']}]
   }
 };

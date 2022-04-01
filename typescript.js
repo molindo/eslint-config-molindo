@@ -12,6 +12,11 @@ module.exports = Object.assign({}, javascript, {
     {
       files: ['**/*.ts', '**/*.tsx'],
       extends: (javascript.extends || []).concat(
+        // This is a compatibility ruleset that:
+        // 1. Disables rules from eslint:recommended which are already handled by TypeScript.
+        // 2. Enables rules that make sense due to TS's typechecking / transpilation.
+        'plugin:@typescript-eslint/eslint-recommended',
+
         'plugin:@typescript-eslint/recommended',
         'plugin:import/typescript'
       ),
@@ -19,8 +24,11 @@ module.exports = Object.assign({}, javascript, {
         project: './tsconfig.json'
       },
       rules: {
-        // Use the one from TypeScript instead
+        // Creates false positives (see https://github.com/molindo/eslint-config-molindo/issues/70)
+        'import/export': OFF,
+        // Use the TypeScript alternatives
         'no-unused-vars': OFF,
+        'no-shadow': OFF,
         // The TypeScript compiler takes care of this
         'import/no-unresolved': OFF,
         '@typescript-eslint/array-type': [ERROR, {default: 'generic'}],
@@ -33,7 +41,12 @@ module.exports = Object.assign({}, javascript, {
         '@typescript-eslint/no-for-in-array': ERROR,
         '@typescript-eslint/no-inferrable-types': ERROR,
         '@typescript-eslint/no-misused-promises': ERROR,
+        // There are valid use cases for this
+        // https://github.com/molindo/eslint-config-molindo/issues/83
+        '@typescript-eslint/no-empty-interface': OFF,
+        '@typescript-eslint/no-empty-function': OFF,
         '@typescript-eslint/no-non-null-assertion': OFF,
+        '@typescript-eslint/no-shadow': [ERROR],
         '@typescript-eslint/no-unused-vars': ERROR,
         '@typescript-eslint/no-var-requires': OFF,
         '@typescript-eslint/switch-exhaustiveness-check': ERROR,

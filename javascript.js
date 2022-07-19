@@ -3,7 +3,8 @@ const {ERROR, OFF, testFiles} = require('./config');
 
 module.exports = {
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: 'latest',
+    sourceType: 'module'
   },
 
   plugins: ['import', 'prettier', 'unicorn'],

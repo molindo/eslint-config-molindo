@@ -63,7 +63,6 @@ module.exports = {
       {allowArrowFunctions: true, allowFunctions: true}
     ],
     'react/jsx-no-target-blank': ERROR,
-    'react/jsx-no-useless-fragment': ERROR,
     'react/jsx-sort-props': [
       ERROR,
       {

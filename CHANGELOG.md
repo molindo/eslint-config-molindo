@@ -5,7 +5,6 @@
 ### Features
 
  - Enable `react/function-component-definition` to have auto fix for using functions of React components (fixes #75)
- - Enable `react/jsx-no-useless-fragment` (fixes #76)
  - Enable `react/no-unstable-nested-components` (fixes #77)
  - Enable `{checksVoidReturn: {attributes: false}}` for `@typescript-eslint/no-misused-promises` (fixes #86)
  - Enable `@typescript-eslint/ban-ts-comment` (fixes #89)
@@ -20,6 +19,7 @@
 
 ### Breaking changes
 
+ - Require `eslint@^8.45`
  - `eslint-config-molindo/setupPlugins` has been removed, since it's no longer necessary (fixes #59)
  - Removed `typescript` from dependencies (consumers should install this)
  - Upstream breaking changes

@@ -9,6 +9,7 @@
  - Enable `react/no-unstable-nested-components` (fixes #77)
  - Enable `{checksVoidReturn: {attributes: false}}` for `@typescript-eslint/no-misused-promises` (fixes #86)
  - Enable `@typescript-eslint/ban-ts-comment` (fixes #89)
+ - Upgrade available major versions of dependencies (`@typescript-eslint/eslint-plugin`)
 
 ### Fixes
 
@@ -20,6 +21,13 @@
 ### Breaking changes
 
  - `eslint-config-molindo/setupPlugins` has been removed, since it's no longer necessary (fixes #59)
+ - Removed `typescript` from dependencies (consumers should install this)
+ - Upstream breaking changes
+    1. [`@typescript-eslint/eslint-plugin` & `@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/blob/main/CHANGELOG.md#breaking-changes)
+    2. [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest/blob/main/CHANGELOG.md#2700-2022-08-28)
+    3. [`prettier`](https://prettier.io/blog/2023/07/05/3.0.0.html)
+    4. [`eslint-plugin-prettier`](https://github.com/prettier/eslint-plugin-prettier/blob/master/CHANGELOG.md#500)
+    5. [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn/releases) (upgraded from v41 to v48)
 
 ## 6.0.0
 

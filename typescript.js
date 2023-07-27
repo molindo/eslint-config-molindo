@@ -31,16 +31,26 @@ module.exports = Object.assign({}, javascript, {
         'no-shadow': OFF,
         // The TypeScript compiler takes care of this
         'import/no-unresolved': OFF,
+        'no-use-before-define': OFF,
         '@typescript-eslint/array-type': [ERROR, {default: 'generic'}],
         '@typescript-eslint/await-thenable': ERROR,
-        '@typescript-eslint/ban-ts-comment': OFF,
+        '@typescript-eslint/ban-ts-comment': [
+          ERROR,
+          {
+            'ts-expect-error': false, // This is sometimes necessary and a better alternative to ts-ignore
+            'ts-ignore': 'allow-with-description'
+          }
+        ],
         // Avoid declaring the implied return type for React components
         '@typescript-eslint/explicit-module-boundary-types': OFF,
         '@typescript-eslint/method-signature-style': [ERROR, 'method'],
         '@typescript-eslint/no-explicit-any': OFF,
         '@typescript-eslint/no-for-in-array': ERROR,
         '@typescript-eslint/no-inferrable-types': ERROR,
-        '@typescript-eslint/no-misused-promises': ERROR,
+        '@typescript-eslint/no-misused-promises': [
+          ERROR,
+          {checksVoidReturn: {attributes: false}}
+        ],
         // There are valid use cases for this
         // https://github.com/molindo/eslint-config-molindo/issues/83
         '@typescript-eslint/no-empty-interface': OFF,

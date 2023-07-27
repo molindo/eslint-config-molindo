@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## 7.0.0
+
+### Features
+
+ - Enable `react/function-component-definition` to have auto fix for using functions of React components (fixes #75)
+ - Enable `react/jsx-no-useless-fragment` (fixes #76)
+ - Enable `react/no-unstable-nested-components` (fixes #77)
+ - Enable `{checksVoidReturn: {attributes: false}}` for `@typescript-eslint/no-misused-promises` (fixes #86)
+ - Enable `@typescript-eslint/ban-ts-comment` (fixes #89)
+
+### Fixes
+
+ - Detect `**/*.{e2e,cy}.{js,jsx,ts,tsx}` as test files (fixes #67)
+ - Change `import/no-extraneous-dependencies` rule configuration to allow dev dependencies in all files since it has too many false positives otherwise (fixes #71)
+ - Add `cy` and `Cypress` globals when `cypress` config is used (fixes #79)
+ - Disable `no-use-before-define` for TypeScript files (fixes #91)
+
+### Breaking changes
+
+ - `eslint-config-molindo/setupPlugins` has been removed, since it's no longer necessary (fixes #59)
+
 ## 6.0.0
 
 ### Features

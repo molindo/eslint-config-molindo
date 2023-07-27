@@ -12,10 +12,6 @@
 2. Setup your project config in `.eslintrc.js`:
 
 ```js
-// This enables ESLint to use dependencies of this config
-// (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-molindo/setupPlugins');
-
 module.exports = {
   // Add configs based on your needs
   extends: [

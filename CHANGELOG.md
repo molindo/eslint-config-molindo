@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 6.0.1
+
+### Fixes
+
+ - Add locale for `react/jsx-sort-props` ([#94](https://github.com/molindo/eslint-config-molindo/pull/94) by [@googol7](https://github.com/googol7))
+
 ## 6.0.0
 
 ### Features

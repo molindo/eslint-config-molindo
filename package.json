@@ -19,6 +19,8 @@
     "javascript.js",
     "typescript.js",
     "config.js",
+    "css-modules.js",
+    "tailwind.js",
     "react.js",
     "jest.js",
     "cypress.js",

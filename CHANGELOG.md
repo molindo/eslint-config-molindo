@@ -9,6 +9,7 @@
  - Enable `{checksVoidReturn: {attributes: false}}` for `@typescript-eslint/no-misused-promises` (fixes #86)
  - Enable `@typescript-eslint/ban-ts-comment` (fixes #89)
  - Upgrade available major versions of dependencies (`@typescript-eslint/eslint-plugin`)
+ - Add `molindo/tailwind`
 
 ### Fixes
 
@@ -22,6 +23,7 @@
  - Require `eslint@^8.45`
  - `eslint-config-molindo/setupPlugins` has been removed, since it's no longer necessary (fixes #59)
  - Removed `typescript` from dependencies (consumers should install this)
+ - CSS modules-related rules were moved to `molindo/css-modules`
  - Upstream breaking changes
     1. [`@typescript-eslint/eslint-plugin` & `@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/blob/main/CHANGELOG.md#breaking-changes)
     2. [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest/blob/main/CHANGELOG.md#2700-2022-08-28)

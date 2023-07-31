@@ -15,8 +15,11 @@
 module.exports = {
   // Add configs based on your needs
   extends: [
-    'molindo/javascript', // Or `molindo/typescript`
+    'molindo/typescript', // Or `molindo/javascript`
+    
     'molindo/react', // Optional
+    'molindo/css-modules', // Optional
+    'molindo/tailwind', // Optional
     'molindo/jest', // Optional
     'molindo/cypress' // Optional
   ]

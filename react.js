@@ -1,13 +1,7 @@
 const {ERROR, OFF, testFiles} = require('./config');
 
 module.exports = {
-  plugins: [
-    'css-modules',
-    'jsx-a11y',
-    'react',
-    'react-hooks',
-    'sort-destructure-keys'
-  ],
+  plugins: ['jsx-a11y', 'react', 'react-hooks', 'sort-destructure-keys'],
 
   settings: {
     react: {
@@ -20,11 +14,7 @@ module.exports = {
     }
   },
 
-  extends: [
-    'plugin:css-modules/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:react/recommended'
-  ],
+  extends: ['plugin:jsx-a11y/recommended', 'plugin:react/recommended'],
 
   rules: {
     'jsx-a11y/label-has-associated-control': ERROR,
@@ -105,7 +95,6 @@ module.exports = {
     {
       files: testFiles,
       rules: {
-        'css-modules/no-unused-class': OFF,
         'react/prop-types': OFF,
         'react/display-name': OFF
       }

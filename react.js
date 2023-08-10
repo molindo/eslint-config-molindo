@@ -56,6 +56,7 @@ module.exports = {
     'react/jsx-sort-props': [
       ERROR,
       {
+        locale: 'en',
         ignoreCase: true,
         reservedFirst: ['key', 'ref']
       }

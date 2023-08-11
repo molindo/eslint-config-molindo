@@ -11,5 +11,9 @@ module.exports = {
           'This should only be used for debugging and removed afterwards.'
       }))
     ]
+  },
+  globals: {
+    cy: false,
+    Cypress: false
   }
 };

@@ -1,5 +1,5 @@
 const confusingBrowserGlobals = require('confusing-browser-globals');
-const {ERROR, OFF, testFiles} = require('./config');
+const {ERROR, OFF} = require('./config');
 
 module.exports = {
   parserOptions: {
@@ -30,12 +30,7 @@ module.exports = {
     'import/newline-after-import': ERROR,
     'import/no-unresolved': [ERROR, {commonjs: true}],
     'import/no-named-as-default': OFF,
-    'import/no-extraneous-dependencies': [
-      ERROR,
-      {
-        devDependencies: testFiles.concat('webpack.config.js', '.eslintrc.js')
-      }
-    ],
+    'import/no-extraneous-dependencies': ERROR,
     'import/order': [
       ERROR,
       {

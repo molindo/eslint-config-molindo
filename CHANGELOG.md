@@ -1,5 +1,36 @@
 # CHANGELOG
 
+## 7.0.0
+
+### Features
+
+ - Enable `react/function-component-definition` to have auto fix for using functions of React components (fixes #75)
+ - Enable `react/no-unstable-nested-components` (fixes #77)
+ - Enable `{checksVoidReturn: {attributes: false}}` for `@typescript-eslint/no-misused-promises` (fixes #86)
+ - Enable `@typescript-eslint/ban-ts-comment` (fixes #89)
+ - Upgrade available major versions of dependencies (`@typescript-eslint/eslint-plugin`)
+ - Add `molindo/tailwind`
+
+### Fixes
+
+ - Detect `**/*.{e2e,cy}.{js,jsx,ts,tsx}` as test files (fixes #67)
+ - Change `import/no-extraneous-dependencies` rule configuration to allow dev dependencies in all files since it has too many false positives otherwise (fixes #71)
+ - Add `cy` and `Cypress` globals when `cypress` config is used (fixes #79)
+ - Disable `no-use-before-define` for TypeScript files (fixes #91)
+
+### Breaking changes
+
+ - Require `eslint@^8.45`
+ - `eslint-config-molindo/setupPlugins` has been removed, since it's no longer necessary (fixes #59)
+ - Removed `typescript` from dependencies (consumers should install this)
+ - CSS modules-related rules were moved to `molindo/css-modules`
+ - Upstream breaking changes
+    1. [`@typescript-eslint/eslint-plugin` & `@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/blob/main/CHANGELOG.md#breaking-changes)
+    2. [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest/blob/main/CHANGELOG.md#2700-2022-08-28)
+    3. [`prettier`](https://prettier.io/blog/2023/07/05/3.0.0.html)
+    4. [`eslint-plugin-prettier`](https://github.com/prettier/eslint-plugin-prettier/blob/master/CHANGELOG.md#500)
+    5. [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn/releases) (upgraded from v41 to v48)
+
 ## 6.0.1
 
 ### Fixes

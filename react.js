@@ -1,13 +1,7 @@
 const {ERROR, OFF, testFiles} = require('./config');
 
 module.exports = {
-  plugins: [
-    'css-modules',
-    'jsx-a11y',
-    'react',
-    'react-hooks',
-    'sort-destructure-keys'
-  ],
+  plugins: ['jsx-a11y', 'react', 'react-hooks', 'sort-destructure-keys'],
 
   settings: {
     react: {
@@ -20,11 +14,7 @@ module.exports = {
     }
   },
 
-  extends: [
-    'plugin:css-modules/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:react/recommended'
-  ],
+  extends: ['plugin:jsx-a11y/recommended', 'plugin:react/recommended'],
 
   rules: {
     'jsx-a11y/label-has-associated-control': ERROR,
@@ -43,6 +33,13 @@ module.exports = {
     'react/jsx-curly-brace-presence': [
       ERROR,
       {props: 'never', children: 'ignore'}
+    ],
+    'react/function-component-definition': [
+      ERROR,
+      {
+        namedComponents: 'function-declaration',
+        unnamedComponents: 'arrow-function'
+      }
     ],
     'react/jsx-handler-names': [
       ERROR,
@@ -68,6 +65,7 @@ module.exports = {
     'react/no-direct-mutation-state': ERROR,
     'react/no-this-in-sfc': ERROR,
     'react/no-typos': ERROR,
+    'react/no-unstable-nested-components': [ERROR, {allowAsProps: true}],
     'react/no-unused-prop-types': ERROR,
     'react/no-unused-state': ERROR,
     'react/self-closing-comp': ERROR,
@@ -98,7 +96,6 @@ module.exports = {
     {
       files: testFiles,
       rules: {
-        'css-modules/no-unused-class': OFF,
         'react/prop-types': OFF,
         'react/display-name': OFF
       }

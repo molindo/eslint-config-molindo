@@ -12,15 +12,14 @@
 2. Setup your project config in `.eslintrc.js`:
 
 ```js
-// This enables ESLint to use dependencies of this config
-// (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-molindo/setupPlugins');
-
 module.exports = {
   // Add configs based on your needs
   extends: [
-    'molindo/javascript', // Or `molindo/typescript`
+    'molindo/typescript', // Or `molindo/javascript`
+    
     'molindo/react', // Optional
+    'molindo/css-modules', // Optional
+    'molindo/tailwind', // Optional
     'molindo/jest', // Optional
     'molindo/cypress' // Optional
   ]

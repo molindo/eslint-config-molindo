@@ -39,7 +39,7 @@ export default [
       'no-use-before-define': OFF,
       'no-unused-expressions': OFF,
 
-      '@typescript-eslint/no-unused-vars': OFF, // Use `noUnusedLocals` instead
+      '@typescript-eslint/no-unused-vars': ERROR,
       '@typescript-eslint/prefer-optional-chain': ERROR,
       '@typescript-eslint/no-unnecessary-condition': ERROR,
       '@typescript-eslint/no-unused-expressions': ERROR,

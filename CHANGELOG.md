@@ -6,8 +6,7 @@
 
 - ESLint 9 compatibility.
 - Upgraded all plugins.
-- `@typescript-eslint/no-unused-vars` has been replaced with `noUnusedLocals` and `noUnusedParameters` in the provided TypeScript config to improve performance.
-- Add `noUncheckedIndexedAccess` and `noImplicitOverride` to TypeScript config (recommended by Matt Pocock).
+- Add `noImplicitOverride` to TypeScript config (recommended by Matt Pocock).
 - [`eslint-import-resolver-typescript`](https://www.npmjs.com/package/eslint-import-resolver-typescript) is now used for TypeScript files to configure `eslint-plugin-import` correctly. This now correctly takes into consideration [`paths`](https://www.typescriptlang.org/tsconfig#paths) from `tsconfig.json` when determining ordering of imports.
 - New rules from [`eslint-plugin-unicorn`](https://www.npmjs.com/package/eslint-plugin-unicorn):
   - `unicorn/prefer-array-index-of`

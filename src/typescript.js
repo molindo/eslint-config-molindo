@@ -16,6 +16,12 @@ export default [
     // causing issues in regular JavaScript files. See also:
     // https://stackoverflow.com/a/64488474/343045
     files: ['**/*.ts', '**/*.tsx'],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname
+      }
+    },
     rules: {
       // The TypeScript compiler takes care of this
       'import/no-unresolved': OFF,

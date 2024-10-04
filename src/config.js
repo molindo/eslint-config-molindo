@@ -7,3 +7,12 @@ export const testFiles = [
   '**/__tests__/**/*.{js,jsx,ts,tsx}',
   '**/*.{spec,test,e2e,cy}.{js,jsx,ts,tsx}'
 ];
+
+export const typescriptFiles = [
+  '**/*.ts',
+  '**/*.tsx',
+  '**/*.mts',
+  '**/*.mtsx',
+  '**/*.cts',
+  '**/*.ctsx'
+];

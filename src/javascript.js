@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import confusingBrowserGlobals from 'confusing-browser-globals';
 import importPlugin from 'eslint-plugin-import';
 import unicornPlugin from 'eslint-plugin-unicorn';
+import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 import {ERROR} from './config.js';
 
 export default [
@@ -14,7 +15,8 @@ export default [
     },
     plugins: {
       unicorn: unicornPlugin,
-      import: importPlugin
+      import: importPlugin,
+      'unused-imports': unusedImportsPlugin
     },
     settings: {
       'import/resolver': 'node'
@@ -28,6 +30,7 @@ export default [
       'func-names': [ERROR, 'as-needed'],
       // See discussion in https://github.com/molindo/eslint-config-molindo/issues/27
       'func-style': [ERROR, 'declaration', {allowArrowFunctions: false}],
+      'unused-imports/no-unused-imports': ERROR,
       'import/named': ERROR,
       'import/namespace': ERROR,
       'import/default': ERROR,
@@ -51,6 +54,7 @@ export default [
           alphabetize: {order: 'asc'}
         }
       ],
+      'import/no-useless-path-segments': ERROR,
       'no-console': [ERROR, {allow: ['warn', 'error']}],
       'no-restricted-globals': [ERROR].concat(confusingBrowserGlobals),
       'no-restricted-syntax': [

@@ -1,7 +1,7 @@
 import importPlugin from 'eslint-plugin-import';
 // eslint-disable-next-line import/no-unresolved -- False positive
 import typescriptEslint from 'typescript-eslint';
-import {ERROR, OFF} from './config.js';
+import {ERROR, OFF, typescriptFiles} from './config.js';
 import javascript from './javascript.js';
 
 export default [
@@ -15,7 +15,7 @@ export default [
     // Only apply TypeScript rules to TypeScript files to avoid
     // causing issues in regular JavaScript files. See also:
     // https://stackoverflow.com/a/64488474/343045
-    files: ['**/*.ts', '**/*.tsx'],
+    files: typescriptFiles,
     settings: {
       'import/resolver': 'typescript'
     },
@@ -37,7 +37,12 @@ export default [
       'no-unused-vars': OFF,
       'no-shadow': OFF,
       'no-use-before-define': OFF,
+      'no-unused-expressions': OFF,
 
+      '@typescript-eslint/no-unused-vars': OFF, // Use `noUnusedLocals` instead
+      '@typescript-eslint/prefer-optional-chain': ERROR,
+      '@typescript-eslint/no-unnecessary-condition': ERROR,
+      '@typescript-eslint/no-unused-expressions': ERROR,
       '@typescript-eslint/array-type': [ERROR, {default: 'generic'}],
       '@typescript-eslint/await-thenable': ERROR,
       '@typescript-eslint/ban-ts-comment': [
@@ -65,10 +70,9 @@ export default [
       '@typescript-eslint/no-shadow': [ERROR],
       '@typescript-eslint/no-var-requires': OFF,
       '@typescript-eslint/switch-exhaustiveness-check': ERROR,
-      '@typescript-eslint/explicit-member-accessibility': [
-        ERROR,
-        {accessibility: 'explicit', overrides: {constructors: 'no-public'}}
-      ]
+      '@typescript-eslint/explicit-member-accessibility': OFF,
+      // Too restrictive
+      '@typescript-eslint/no-empty-object-type': OFF
     }
   }
 ];

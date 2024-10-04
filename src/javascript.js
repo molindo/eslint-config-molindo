@@ -85,7 +85,10 @@ export default [
       ],
       'unicorn/explicit-length-check': ERROR,
       'unicorn/import-index': ERROR,
-      'unicorn/no-abusive-eslint-disable': ERROR
+      'unicorn/no-abusive-eslint-disable': ERROR,
+      'unicorn/prefer-array-index-of': ERROR,
+      'unicorn/prefer-optional-catch-binding': ERROR,
+      'unicorn/no-useless-spread': ERROR
     }
   }
 ];

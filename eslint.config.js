@@ -7,6 +7,7 @@ export default [
   ...all.tailwind,
   ...all.jest,
   ...all.cypress,
+  ...all.vitest,
   {
     languageOptions: {
       globals: {

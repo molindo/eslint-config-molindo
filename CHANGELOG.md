@@ -20,12 +20,13 @@
   - `import/no-useless-path-segments`
 - Apply TypeScript-specific rules also to `.mts`, `.mtsx`, `.cts` and `.ctsx` files.
 - Add [`eslint-plugin-unused-imports`](https://www.npmjs.com/package/eslint-plugin-unused-imports) to remove unused imports during autofix.
+- Add vitest rules.
 
 ### Breaking changes
 
 - ESLint 9 is now required (see updated README)
 - The ESLint config is intended to be consumed via ESM (e.g. by using `eslint.config.mjs`)
-- Prettier no longer runs via an integrated rule since this is [discouraged](https://prettier.io/docs/en/integrating-with-linters#notes). Instead, a supplemental Prettier config is now provided (see updated README).
+- Prettier no longer runs via an integrated rule since this is [discouraged](https://prettier.io/docs/en/integrating-with-linters#notes). Instead, a supplemental Prettier config is now provided (see updated README). To enable prettier checking on CI, you might want to consider adding `prettier --check` to your CI pipeline.
 - The `valid-jsdoc` rule has been removed since it was removed from ESLint core and is only available via an additional plugin. If you'd like to keep this rule, add [`eslint-plugin-jsdoc`](https://www.npmjs.com/package/eslint-plugin-jsdoc) to your project.
 - Globals for Cypress are no longer provided out of the box, but should be added explicitly by projects (see [predefined global variables](https://eslint.org/docs/latest/use/configure/language-options#predefined-global-variables)).
 

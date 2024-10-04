@@ -23,6 +23,7 @@ export default [
   ...molindo.react,
   ...molindo.cssModules,
   ...molindo.tailwind,
+  ...molindo.vitest,
   ...molindo.jest,
   ...molindo.cypress,
 

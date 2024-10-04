@@ -12,16 +12,13 @@ export default [
         ecmaVersion: 'latest'
       }
     },
-
     plugins: {
       unicorn: unicornPlugin,
       import: importPlugin
     },
-
     settings: {
       'import/resolver': 'node'
     },
-
     rules: {
       'array-callback-return': ERROR,
       'arrow-body-style': [ERROR, 'as-needed'],

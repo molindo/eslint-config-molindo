@@ -12,13 +12,11 @@ export default [
       'react-hooks': reactHooks,
       'sort-destructure-keys': sortDestructureKeys
     },
-
     settings: {
       react: {
         version: 'detect'
       }
     },
-
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
@@ -26,7 +24,6 @@ export default [
         }
       }
     },
-
     rules: {
       'jsx-a11y/label-has-associated-control': ERROR,
       'react/button-has-type': ERROR,

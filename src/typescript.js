@@ -16,6 +16,9 @@ export default [
     // causing issues in regular JavaScript files. See also:
     // https://stackoverflow.com/a/64488474/343045
     files: ['**/*.ts', '**/*.tsx'],
+    settings: {
+      'import/resolver': 'typescript'
+    },
     languageOptions: {
       parserOptions: {
         projectService: true,

@@ -6,9 +6,7 @@ export default [
     plugins: {
       jest: jestPlugin
     },
-
     files: testFiles,
-
     rules: {
       'jest/consistent-test-it': [
         ERROR,

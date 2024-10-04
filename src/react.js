@@ -1,3 +1,4 @@
+import {fixupPluginRules} from '@eslint/compat';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -9,7 +10,7 @@ export default [
   react.configs.flat.recommended,
   {
     plugins: {
-      'react-hooks': reactHooks,
+      'react-hooks': fixupPluginRules(reactHooks),
       'sort-destructure-keys': sortDestructureKeys
     },
     settings: {

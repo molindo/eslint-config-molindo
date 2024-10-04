@@ -24,22 +24,24 @@ export default [
   ...molindo.cssModules,
   ...molindo.tailwind,
   ...molindo.jest,
-  ...molindo.cypress
+  ...molindo.cypress,
+
+  {
+    // Your custom config
+  }
 ];
 ```
 
 3. If you use TypeScript, add `"extends": "eslint-config-molindo/tsconfig.json"` to your `tsconfig.json`.
-4. Happy linting!
+4. If you use Prettier, add `"prettier": "eslint-config-molindo/.prettierrc.json"` to your `package.json`.
+
+Happy linting!
 
 ## Further configuration
 
-### Prettier
-
-If you use [Prettier](https://prettier.io/) to format your code, you can extend from `eslint-config-molindo/.prettierrc`.
-
 ### Globals
 
-Configure [`globals`](https://eslint.org/docs/latest/use/configure/language-options#predefined-global-variables) as necessary, e.g. if you're using global Jest functionality.
+Configure [`globals`](https://eslint.org/docs/latest/use/configure/language-options#predefined-global-variables) as necessary, e.g. if you're using global APIs from Jest or Cypress.
 
 ### Editor integration
 
@@ -48,7 +50,7 @@ It's strongly recommended to use an ESLint integration for your editor of choice
 Additionally, it's recommended to auto fix errors on save:
 
 ```js
-// settings.json
+// settings.json (VSCode)
 {
   "editor.codeActionsOnSave": {
     "source.fixAll": "always"
@@ -59,7 +61,7 @@ Additionally, it's recommended to auto fix errors on save:
 If you're using Prettier, you may want to apply it automatically as well:
 
 ```js
-// settings.json
+// settings.json (VSCode)
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true

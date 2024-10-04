@@ -13,12 +13,6 @@ export default [
             'This should only be used for debugging and removed afterwards.'
         }))
       ]
-    },
-    languageOptions: {
-      globals: {
-        cy: false,
-        Cypress: false
-      }
     }
   }
 ];

@@ -6,9 +6,9 @@
 2. Make reading code easier by providing consistent code style.
 3. Make writing code faster by leveraging auto fix wherever possible.
 
-## Usage
+## Getting started
 
-1. `yarn add eslint eslint-config-molindo --dev`
+1. `yarn add eslint eslint-config-molindo prettier --dev`
 2. Setup your project config in `eslint.config.mjs`:
 
 ```js
@@ -33,43 +33,70 @@ export default [
 ];
 ```
 
-3. If you use TypeScript, add `"extends": "eslint-config-molindo/tsconfig.json"` to your `tsconfig.json`.
-4. If you use Prettier, add `"prettier": "eslint-config-molindo/.prettierrc.json"` to your `package.json`.
+3. If you require [globals](https://eslint.org/docs/latest/use/configure/language-options#predefined-global-variables), like browser APIs on `window`, you can add them to your config:
+
+```js
+// eslint.config.mjs
+import globals from 'globals';
+
+export default [
+  // ...
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      }
+    }
+  }
+];
+```
+
+4. To set up Prettier, add to your `package.json`:
+
+```json
+"prettier": "eslint-config-molindo/.prettierrc.json"
+```
+
+5. If you use TypeScript, add to your `tsconfig.json`:
+
+```json
+"extends": "eslint-config-molindo/tsconfig.json"
+```
 
 Happy linting!
 
 ## Further configuration
 
-### Globals
+### CI integration
 
-Configure [`globals`](https://eslint.org/docs/latest/use/configure/language-options#predefined-global-variables) as necessary, e.g. if you're using global APIs from Jest or Cypress.
+To validate your code in a CI pipeline, add the following to your `package.json`:
 
-### Editor integration
+```json
+"scripts": {
+  "lint": "eslint src && prettier src --check"
+}
+```
 
-It's strongly recommended to use an ESLint integration for your editor of choice (e. g. [`dbaeumer.vscode-eslint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) for [VSCode](https://code.visualstudio.com/) so you see errors while writing code.
+### VSCode integration
 
-Additionally, it's recommended to auto fix errors on save:
+The following two extensions are recommended:
+
+1. [`dbaeumer.vscode-eslint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+2. [`esbenp.prettier-vscode`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+To auto-fix errors from ESLint as well as Prettier on save, you can use the following configuration:
 
 ```js
 // settings.json (VSCode)
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll": "always"
-  }
-}
-```
-
-If you're using Prettier, you may want to apply it automatically as well:
-
-```js
-// settings.json (VSCode)
-{
+    "source.fixAll.eslint": "always"
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true
 }
 ```
-
-By doing this, both Prettier as well as ESLint will fix errors on save.
 
 ## Versioning
 

@@ -1,5 +1,10 @@
+// @ts-check
+
 import * as all from './src/index.js';
 
+/**
+ * @type {Array<import('eslint').Linter.Config>}
+ */
 export default [
   ...all.typescript, // (contains javascript)
   ...all.react,
@@ -11,11 +16,11 @@ export default [
   {
     languageOptions: {
       globals: {
-        it: false,
-        describe: false,
-        expect: false,
-        cy: false,
-        Cypress: false
+        it: 'readonly',
+        describe: 'readonly',
+        expect: 'readonly',
+        cy: 'readonly',
+        Cypress: 'readonly'
       }
     }
   }

@@ -1,9 +1,15 @@
+// @ts-check
+
+// @ts-expect-error -- False positive
 import importPlugin from 'eslint-plugin-import';
 // eslint-disable-next-line import/no-unresolved -- False positive
 import typescriptEslint from 'typescript-eslint';
 import {ERROR, OFF, typescriptFiles} from './config.js';
 import javascript from './javascript.js';
 
+/**
+ * @type {Array<import('eslint').Linter.Config>}
+ */
 export default [
   ...javascript,
 

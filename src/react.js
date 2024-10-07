@@ -1,18 +1,23 @@
+// @ts-check
+
 import {fixupPluginRules} from '@eslint/compat';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
+import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import sortDestructureKeys from 'eslint-plugin-sort-destructure-keys';
 import {ERROR, OFF} from './config.js';
 
+/**
+ * @type {Array<import('eslint').Linter.Config>}
+ */
 export default [
-  jsxA11y.flatConfigs.recommended,
-  react.configs.flat.recommended,
+  jsxA11yPlugin.flatConfigs.recommended,
+  /** @type {any} -- This is fine */ (reactPlugin.configs.flat.recommended),
   {
-    plugins: {
-      'react-hooks': fixupPluginRules(reactHooks),
+    plugins: /** @type {any} -- Compatibility is fixed */ ({
+      'react-hooks': fixupPluginRules(/** @type {any} */ (reactHooksPlugin)),
       'sort-destructure-keys': sortDestructureKeys
-    },
+    }),
     settings: {
       react: {
         version: 'detect'

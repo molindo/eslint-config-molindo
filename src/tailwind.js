@@ -1,6 +1,11 @@
+// @ts-check
+
 import tailwindcssPlugin from 'eslint-plugin-tailwindcss';
 import {ERROR} from './config.js';
 
+/**
+ * @type {Array<import('eslint').Linter.Config>}
+ */
 export default [
   {
     plugins: {

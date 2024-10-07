@@ -1,10 +1,16 @@
+// @ts-check
+
 import js from '@eslint/js';
 import confusingBrowserGlobals from 'confusing-browser-globals';
+// @ts-expect-error -- False positive
 import importPlugin from 'eslint-plugin-import';
 import unicornPlugin from 'eslint-plugin-unicorn';
 import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 import {ERROR} from './config.js';
 
+/**
+ * @type {Array<import('eslint').Linter.Config>}
+ */
 export default [
   js.configs.recommended,
   {
@@ -56,7 +62,9 @@ export default [
       ],
       'import/no-useless-path-segments': ERROR,
       'no-console': [ERROR, {allow: ['warn', 'error']}],
-      'no-restricted-globals': [ERROR].concat(confusingBrowserGlobals),
+      'no-restricted-globals': /** @type {any} -- This is correct */ (
+        [ERROR].concat(confusingBrowserGlobals)
+      ),
       'no-restricted-syntax': [
         ERROR,
         {

@@ -1,6 +1,11 @@
+// @ts-check
+
 import vitestPlugin from '@vitest/eslint-plugin';
 import {ERROR, testFiles} from './config.js';
 
+/**
+ * @type {Array<import('eslint').Linter.Config>}
+ */
 export default [
   {
     plugins: {

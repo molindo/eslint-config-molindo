@@ -1,5 +1,10 @@
+// @ts-check
+
 import {ERROR, testFiles} from './config.js';
 
+/**
+ * @type {Array<import('eslint').Linter.Config>}
+ */
 export default [
   {
     files: testFiles,

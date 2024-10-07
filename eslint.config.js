@@ -1,18 +1,20 @@
 // @ts-check
 
-import * as all from './src/index.js';
+import {getConfig} from './src/index.js';
 
 /**
  * @type {Array<import('eslint').Linter.Config>}
  */
 export default [
-  ...all.typescript, // (contains javascript)
-  ...all.react,
-  ...all.cssModules,
-  ...all.tailwind,
-  ...all.jest,
-  ...all.cypress,
-  ...all.vitest,
+  ...(await getConfig(
+    'typescript', // (contains javascript)
+    'react',
+    'cssModules',
+    'tailwind',
+    'jest',
+    'cypress',
+    'vitest'
+  )),
   {
     languageOptions: {
       globals: {

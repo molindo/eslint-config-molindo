@@ -12,20 +12,23 @@
 2. Setup your project config in `eslint.config.mjs`:
 
 ```js
-// eslint.config.mjs
-import * as molindo from 'eslint-config-molindo';
+// @ts-check
+
+import {getConfig} from 'eslint-config-molindo';
 
 export default [
-  // Base config
-  ...molindo.typescript, // or `molindo.javascript`
+  ...(await getConfig(
+    // Base config
+    'typescript', // or 'javascript'
 
-  // Optional extensions
-  ...molindo.react,
-  ...molindo.cssModules,
-  ...molindo.tailwind,
-  ...molindo.vitest,
-  ...molindo.jest,
-  ...molindo.cypress,
+    // Optional extensions
+    'react',
+    'cssModules',
+    'tailwind',
+    'jest',
+    'cypress',
+    'vitest'
+  )),
 
   {
     // Your custom config

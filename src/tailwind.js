@@ -1,13 +1,7 @@
 // @ts-check
 
+import tailwindcssPlugin from 'eslint-plugin-tailwindcss';
 import {ERROR} from './config.js';
-
-let tailwindcssPlugin;
-try {
-  tailwindcssPlugin = (await import('eslint-plugin-tailwindcss')).default;
-} catch {
-  // Don't fail in a setup without Tailwind installed
-}
 
 /**
  * @type {Array<import('eslint').Linter.Config>}
@@ -15,7 +9,7 @@ try {
 export default [
   {
     plugins: {
-      tailwindcss: /** @type {any} */ (tailwindcssPlugin)
+      tailwindcss: tailwindcssPlugin
     },
     rules: {
       'tailwindcss/classnames-order': ERROR,

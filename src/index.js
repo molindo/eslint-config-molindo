@@ -1,8 +1,17 @@
-export {default as javascript} from './javascript.js';
-export {default as typescript} from './typescript.js';
-export {default as react} from './react.js';
-export {default as cssModules} from './cssModules.js';
-export {default as tailwind} from './tailwind.js';
-export {default as jest} from './jest.js';
-export {default as cypress} from './cypress.js';
-export {default as vitest} from './vitest.js';
+// @ts-check
+
+/**
+ * Loads the relevant ESLint configuration files.
+ *
+ * This enables to avoid loading plugins that may have
+ * peer dependencies that are not installed.
+ *
+ * @param {...('javascript'|'typescript'|'react'|'cssModules'|'tailwind'|'jest'|'cypress'|'vitest')} names - The names of configurations to load
+ * @returns {Promise<import('eslint').Linter.Config[]>}
+ */
+export async function getConfig(...names) {
+  const config = await Promise.all(
+    names.map((name) => import(`./${name}.js`).then((mod) => mod.default))
+  );
+  return config.flat();
+}

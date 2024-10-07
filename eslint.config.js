@@ -1,12 +1,12 @@
 // @ts-check
 
-import {getConfig} from './src/index.js';
+import {getPresets} from './src/index.js';
 
 /**
  * @type {Array<import('eslint').Linter.Config>}
  */
 export default [
-  ...(await getConfig(
+  ...(await getPresets(
     'typescript', // (contains javascript)
     'react',
     'cssModules',

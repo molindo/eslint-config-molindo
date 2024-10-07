@@ -14,10 +14,10 @@
 ```js
 // @ts-check
 
-import {getConfig} from 'eslint-config-molindo';
+import {getPresets} from 'eslint-config-molindo';
 
 export default [
-  ...(await getConfig(
+  ...(await getPresets(
     // Base config
     'typescript', // or 'javascript'
 

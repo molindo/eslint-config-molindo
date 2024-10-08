@@ -1,6 +1,5 @@
 // @ts-check
 
-import {fixupPluginRules} from '@eslint/compat';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
@@ -14,10 +13,10 @@ export default [
   jsxA11yPlugin.flatConfigs.recommended,
   /** @type {any} -- This is fine */ (reactPlugin.configs.flat.recommended),
   {
-    plugins: /** @type {any} -- Compatibility is fixed */ ({
-      'react-hooks': fixupPluginRules(/** @type {any} */ (reactHooksPlugin)),
+    plugins: {
+      'react-hooks': reactHooksPlugin,
       'sort-destructure-keys': sortDestructureKeys
-    }),
+    },
     settings: {
       react: {
         version: 'detect'

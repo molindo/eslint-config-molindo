@@ -64,6 +64,10 @@ export default [
       '@typescript-eslint/no-explicit-any': OFF,
       '@typescript-eslint/no-for-in-array': ERROR,
       '@typescript-eslint/no-inferrable-types': ERROR,
+      '@typescript-eslint/no-misused-promises': [
+        ERROR,
+        {checksVoidReturn: {attributes: false}}
+      ],
       // There are valid use cases for this
       // https://github.com/molindo/eslint-config-molindo/issues/83
       '@typescript-eslint/no-empty-interface': OFF,

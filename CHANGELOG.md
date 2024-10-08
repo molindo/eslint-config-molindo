@@ -28,6 +28,7 @@
 - Prettier no longer runs via an integrated rule since this is [discouraged](https://prettier.io/docs/en/integrating-with-linters#notes). Instead, a supplemental Prettier config is now provided (see updated README). To enable prettier checking on CI, you might want to consider adding `prettier --check` to your CI pipeline.
 - The `valid-jsdoc` rule has been removed since it was removed from ESLint core and is only available via an additional plugin. If you'd like to keep this rule, add [`eslint-plugin-jsdoc`](https://www.npmjs.com/package/eslint-plugin-jsdoc) to your project.
 - Globals for Cypress are no longer provided out of the box, but should be added explicitly by projects (see [predefined global variables](https://eslint.org/docs/latest/use/configure/language-options#predefined-global-variables)).
+- The `src` directory is no longer resolved by default. For TypeScript projects, [`paths`](https://www.typescriptlang.org/tsconfig#paths) from `tsconfig.json` are now suggested as the alternative and will be resolved by default. For JavaScript projects, you can add `settings: {'import/resolver': {node: {paths: ['node_modules', 'src']}}}` to your ESLint config.
 
 ## 7.0.0
 

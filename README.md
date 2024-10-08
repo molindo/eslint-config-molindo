@@ -12,8 +12,6 @@
 2. Setup your project config in `eslint.config.mjs`:
 
 ```js
-// @ts-check
-
 import {getPresets} from 'eslint-config-molindo';
 
 export default [

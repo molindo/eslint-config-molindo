@@ -14,16 +14,5 @@ export default [
     'jest',
     'cypress',
     'vitest'
-  )),
-  {
-    languageOptions: {
-      globals: {
-        it: 'readonly',
-        describe: 'readonly',
-        expect: 'readonly',
-        cy: 'readonly',
-        Cypress: 'readonly'
-      }
-    }
-  }
+  ))
 ];

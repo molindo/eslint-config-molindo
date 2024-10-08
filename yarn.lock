@@ -297,10 +297,10 @@
     "@typescript-eslint/types" "8.8.0"
     eslint-visitor-keys "^3.4.3"
 
-"@vitest/eslint-plugin@1.1.5":
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@vitest/eslint-plugin/-/eslint-plugin-1.1.5.tgz#f81502fa1bf8d69d9a681cd86c02f568f6f9c438"
-  integrity sha512-a02F1HAJ/A1ietP96QDxkRqZROdgCJvNXSkmHAXTcTHnmj9Hh2gqi7x4M+miOj1sDIef2qGqE8zmMBb2PgTE8w==
+"@vitest/eslint-plugin@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@vitest/eslint-plugin/-/eslint-plugin-1.1.7.tgz#f757b2e7a02227b927817aeefcafaa054ca187c0"
+  integrity sha512-pTWGW3y6lH2ukCuuffpan6kFxG6nIuoesbhMiQxskyQMRcCN5t9SXsKrNHvEw3p8wcCsgJoRqFZVkOTn6TjclA==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -1150,7 +1150,7 @@ eslint-import-resolver-node@^0.3.9:
     is-core-module "^2.13.0"
     resolve "^1.22.4"
 
-eslint-import-resolver-typescript@3.6.3:
+eslint-import-resolver-typescript@^3.6.3:
   version "3.6.3"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-3.6.3.tgz#bb8e388f6afc0f940ce5d2c5fd4a3d147f038d9e"
   integrity sha512-ud9aw4szY9cCT1EWWdGv1L1XR6hh2PaRWif0j2QjQ0pgTY/69iw+W0Z4qZv5wHahOl8isEr+k/JnyAqNQkLkIA==
@@ -1233,10 +1233,10 @@ eslint-plugin-jsx-a11y@^6.10.0:
     safe-regex-test "^1.0.3"
     string.prototype.includes "^2.0.0"
 
-eslint-plugin-react-hooks@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.6.0.tgz#4c3e697ad95b77e93f8646aaa1630c1ba607edd3"
-  integrity sha512-oFc7Itz9Qxh2x4gNHStv3BqJq54ExXmfC+a1NjAta66IAN87Wu0R/QArgIS9qKzX3dXKPI9H5crl9QchNMY9+g==
+eslint-plugin-react-hooks@5.1.0-beta-26f2496093-20240514:
+  version "5.1.0-beta-26f2496093-20240514"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-5.1.0-beta-26f2496093-20240514.tgz#ca1309b80d07927d00d8b503832796baf620df9a"
+  integrity sha512-nCZD93/KYY5hNAWGhfvvrEXvLFIXJCMu2St7ciHeiWUp/lnS2RVgWawp2kNQamr9Y23C9lUA03TmDRNgbm05vg==
 
 eslint-plugin-react@^7.37.0:
   version "7.37.1"
@@ -1299,7 +1299,7 @@ eslint-plugin-unicorn@^56.0.0:
     semver "^7.6.3"
     strip-indent "^3.0.0"
 
-eslint-plugin-unused-imports@4.1.4:
+eslint-plugin-unused-imports@^4.1.4:
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/eslint-plugin-unused-imports/-/eslint-plugin-unused-imports-4.1.4.tgz#62ddc7446ccbf9aa7b6f1f0b00a980423cda2738"
   integrity sha512-YptD6IzQjDardkl0POxnnRBhU1OEePMV0nd6siHaRBbd+lyh6NAhFEobiznKU7kTsSsDeSD62Pe7kAM1b7dAZQ==

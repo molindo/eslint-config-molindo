@@ -20,6 +20,7 @@
 - Apply TypeScript-specific rules also to `.mts`, `.mtsx`, `.cts` and `.ctsx` files.
 - Add [`eslint-plugin-unused-imports`](https://www.npmjs.com/package/eslint-plugin-unused-imports) to remove unused imports during autofix.
 - Add vitest rules.
+- Enable `sort-imports`.
 
 ### Breaking changes
 

@@ -83,6 +83,13 @@ export default [
       'object-shorthand': ERROR,
       'prefer-arrow-callback': ERROR,
       'prefer-const': ERROR,
+      'sort-imports': [
+        ERROR,
+        {
+          // The `import/order` rule takes care of sorting import declarations
+          ignoreDeclarationSort: true
+        }
+      ],
       'spaced-comment': [
         ERROR,
         'always',

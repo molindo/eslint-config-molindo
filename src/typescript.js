@@ -73,7 +73,7 @@ export default [
       '@typescript-eslint/no-empty-interface': OFF,
       '@typescript-eslint/no-empty-function': OFF,
       '@typescript-eslint/no-non-null-assertion': OFF,
-      '@typescript-eslint/no-shadow': [ERROR],
+      '@typescript-eslint/no-shadow': ERROR,
       '@typescript-eslint/no-var-requires': OFF,
       '@typescript-eslint/switch-exhaustiveness-check': ERROR,
       '@typescript-eslint/explicit-member-accessibility': OFF,

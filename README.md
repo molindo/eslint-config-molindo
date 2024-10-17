@@ -6,54 +6,101 @@
 2. Make reading code easier by providing consistent code style.
 3. Make writing code faster by leveraging auto fix wherever possible.
 
-## Usage
+## Getting started
 
-1. `yarn add eslint eslint-config-molindo --dev`
-2. Setup your project config in `.eslintrc.js`:
+1. `yarn add eslint eslint-config-molindo prettier --dev`
+2. Setup your project config in `eslint.config.mjs`:
 
 ```js
-module.exports = {
-  // Add configs based on your needs
-  extends: [
-    'molindo/typescript', // Or `molindo/javascript`
-    
-    'molindo/react', // Optional
-    'molindo/css-modules', // Optional
-    'molindo/tailwind', // Optional
-    'molindo/jest', // Optional
-    'molindo/cypress' // Optional
-  ]
-}
+import {getPresets} from 'eslint-config-molindo';
+
+export default [
+  ...(await getPresets(
+    // Base config
+    'typescript', // or 'javascript'
+
+    // Optional extensions
+    'react',
+    'cssModules',
+    'tailwind',
+    'jest',
+    'cypress',
+    'vitest'
+  )),
+
+  {
+    // Your custom config
+  }
+];
 ```
 
-3. If you use TypeScript, add `"extends": "eslint-config-molindo/tsconfig.json"` to your `tsconfig.json`.
-4. Happy linting!
+3. If you require [globals](https://eslint.org/docs/latest/use/configure/language-options#predefined-global-variables), like browser APIs on `window`, you can add them to your config:
+
+```js
+// eslint.config.mjs
+import globals from 'globals';
+
+export default [
+  // ...
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      }
+    }
+  }
+];
+```
+
+4. To set up Prettier, add to your `package.json`:
+
+```json
+"prettier": "eslint-config-molindo/.prettierrc.json"
+```
+
+5. If you use TypeScript, add to your `tsconfig.json`:
+
+```json
+"extends": "eslint-config-molindo/tsconfig.json"
+```
+
+Happy linting!
 
 ## Further configuration
 
-### Environment
+### CI integration
 
-Set the [`env` in `.eslintrc`](https://eslint.org/docs/user-guide/configuring#specifying-environments) as necessary so ESLint doesn't report missing globals.
- 
-E.g.:
+To validate your code in a CI pipeline, add the following to your `package.json`:
 
 ```json
-{
-  "browser": true,
-  "node": true,
-  "es6": true,
-  "jest": true
+"scripts": {
+  "lint": "eslint src && prettier src --check"
 }
 ```
 
-### Editor integration
+### VSCode integration
 
-It's strongly recommended to use an eslint integration for your editor of choice (e. g. [`dbaeumer.vscode-eslint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) for [VSCode](https://code.visualstudio.com/) so you see warnings and errors while writing code. Also the setting to auto fix errors on save should be turned on, so purely stylistic errors such as the ones reported by `prettier` are fixed automatically.
+The following two extensions are recommended:
 
-If your linter plugin checks your code as you type (before you save) it can be helpful to silence stylistic errors to reduce noise and let the formatting happen on save.
+1. [`dbaeumer.vscode-eslint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+2. [`esbenp.prettier-vscode`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+To auto-fix errors from ESLint as well as Prettier on save, you can use the following configuration:
+
+```js
+// settings.json (VSCode)
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}
+```
 
 ## Versioning
 
- - Patch releases are for improved documentation, fixing a rule to stop reporting false positives and internal code changes.
- - Minor releases are for changes to rules that can automatically be fixed.
- - Major releases happen when rules are changed that can't be fixed automatically.
+- Patch releases are for improved documentation, fixing a rule to stop reporting false positives and internal code changes.
+- Minor releases are for changes to rules that can automatically be fixed.
+- Major releases happen when rules are changed that can't be fixed automatically.
